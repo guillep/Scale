@@ -1,0 +1,14 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "TODO",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

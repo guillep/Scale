@@ -1,0 +1,14 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ScaleSystemFacade",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

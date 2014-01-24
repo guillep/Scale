@@ -1,0 +1,14 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"system" ],
+	"name" : "ScaleScriptRunner",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

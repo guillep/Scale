@@ -1,0 +1,4 @@
+utils
+stdout
+
+	^ FileStream stdout
