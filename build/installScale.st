@@ -11,6 +11,12 @@ Gofer it
 	configurationOf: 'OSProcess';
 	loadVersion: '4.5.8'.
 
+FileStream stdout << 'Installing TaskIT'; cr.
+Gofer it
+	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT';
+	configurationOf: 'TaskIT';
+	loadVersion: #bleedingEdge.
+
 FileStream stdout << 'Installing Scale'; cr.
 Gofer it
 	repository: (MCFileTreeRepository new 
