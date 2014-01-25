@@ -6,7 +6,10 @@ Scale is a little project that aims to take Pharo into the shell. That is, to wr
 Examples
 -------
 
-Writing a program that interacts with stdin and stdout:
+You can find a lot more of examples in the examples directory. Here we show you a bunch of them
+
+
+#### Writing a program that interacts with stdin and stdout:
 
 ```bash
 #!/usr/bin/scale/pharo
@@ -20,7 +23,7 @@ got := system stdin upTo: Character lf.
 ]
 ```
 
-Writing a program that calls ls -l
+#### Writing a program that calls ls -l
 
 ```bash
 #!/usr/bin/scale/pharo
@@ -31,7 +34,7 @@ Writing a program that calls ls -l
 ].
 ```
 
-Or doing the same directly in Pharo :D
+#### Or doing the same directly in Pharo :D
 
 ```bash
 #!/usr/bin/scale/pharo
