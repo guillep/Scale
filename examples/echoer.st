@@ -1,4 +1,6 @@
-#!./scale
+#!/usr/bin/scale/pharo
+
+system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
 
 got := system stdin upTo: Character lf.
 [ got = 'exit' ] whileFalse: [

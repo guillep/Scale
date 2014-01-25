@@ -8,3 +8,5 @@ fact := [ :n | | fact1 |
 	].
 	fact1 value: n value: (n-1).
 ].
+
+system stdout << (fact value: 18) asString
