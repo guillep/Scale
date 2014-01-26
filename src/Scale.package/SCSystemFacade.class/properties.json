@@ -1,0 +1,14 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"resultsWaited" ],
+	"name" : "SCSystemFacade",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

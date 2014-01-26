@@ -1,0 +1,15 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"interpreter",
+		"command" ],
+	"name" : "SCExternalProcess",
+	"pools" : [
+		 ],
+	"super" : "TKTTask",
+	"type" : "normal" }

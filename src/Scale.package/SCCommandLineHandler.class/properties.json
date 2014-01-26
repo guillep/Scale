@@ -1,0 +1,14 @@
+{
+	"category" : "Scale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SCCommandLineHandler",
+	"pools" : [
+		 ],
+	"super" : "BasicCodeLoader",
+	"type" : "normal" }
