@@ -1,4 +1,0 @@
-utils
-stdin
-
-	^ FileStream stdin
