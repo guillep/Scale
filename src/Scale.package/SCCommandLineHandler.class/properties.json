@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:22",
 	"instvars" : [
 		 ],
 	"name" : "SCCommandLineHandler",
 	"pools" : [
 		 ],
-	"super" : "BasicCodeLoader",
+	"super" : "STCommandLineHandler",
 	"type" : "normal" }

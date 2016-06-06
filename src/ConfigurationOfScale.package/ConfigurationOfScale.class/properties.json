@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfScale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfScale",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

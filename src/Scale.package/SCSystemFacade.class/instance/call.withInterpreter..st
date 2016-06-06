@@ -1,4 +1,3 @@
 private
 call: aCommand withInterpreter: anInterpreter
-
-	^ (self callAsync: aCommand withInterpreter: anInterpreter) value
+	^ self call: aCommand withInterpreter: anInterpreter withExecutionMessage: #executeSync

@@ -1,10 +1,6 @@
 running
-run: aScript 
-
+run: aScript
 	| result |
-	result := Compiler
-			evaluate: aScript
-			for: self
-			logged: false.
+	result := Compiler evaluate: aScript for: self logged: false.
 	system joinAllCalls.
 	^ result

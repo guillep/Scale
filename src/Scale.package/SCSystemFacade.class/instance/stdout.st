@@ -1,4 +1,3 @@
 utils
 stdout
-
 	^ FileStream stdout

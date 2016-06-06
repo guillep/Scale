@@ -1,0 +1,1 @@
+It exposes a set of functions for the user. 

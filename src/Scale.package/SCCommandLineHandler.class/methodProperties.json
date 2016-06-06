@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"commandName" : "GuillermoPolito 1/23/2014 12:53",
-		"isResponsibleFor:" : "GuillermoPolito 1/23/2014 12:54",
-		"priority" : "GuillermoPolito 1/23/2014 20:15" },
+		"commandName" : "GuillePolito 1/27/2014 10:53:15",
+		"isResponsibleFor:" : "GuillePolito 1/27/2014 10:53:15",
+		"priority" : "GuillePolito 1/27/2014 10:53:15" },
 	"instance" : {
-		"activate" : "GuillermoPolito 1/23/2014 21:24",
-		"installSourceFile:" : "GuillermoPolito 1/26/2014 20:12" } }
+		"activate" : "SantiagoBragagnolo 6/2/2016 15:16",
+		"installSourceFile:" : "SantiagoBragagnolo 6/2/2016 17:30" } }

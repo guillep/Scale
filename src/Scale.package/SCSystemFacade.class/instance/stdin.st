@@ -1,4 +1,3 @@
 utils
 stdin
-
 	^ FileStream stdin

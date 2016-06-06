@@ -1,4 +1,3 @@
 utils
 workingDirectory
-
 	^ FileSystem workingDirectory

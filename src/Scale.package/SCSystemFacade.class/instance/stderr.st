@@ -1,4 +1,3 @@
 utils
 stderr
-
 	^ FileStream stderr

@@ -1,0 +1,1 @@
+SCCommandLineHandle is the entry point 

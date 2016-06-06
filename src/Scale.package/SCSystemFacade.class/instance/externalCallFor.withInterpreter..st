@@ -1,6 +1,7 @@
 private
 externalCallFor: aCommand withInterpreter: anInterpreter
-
-	^ SCExternalProcess new
-		withInterpreter: anInterpreter andCommand: aCommand;
+	^ TKTShellCommand new
+		command: aCommand;
+		interpreter: anInterpreter;
 		yourself
+		

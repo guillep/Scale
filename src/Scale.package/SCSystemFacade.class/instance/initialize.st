@@ -1,6 +1,4 @@
 initialize-release
 initialize
-
 	super initialize.
-	
-	resultsWaited := Set new.
+	resultsWaited := Set new
