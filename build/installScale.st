@@ -24,6 +24,13 @@ Gofer it
 	loadVersion: #bleedingEdge.
 
 
+FileStream stdout << 'Installing Roll'; cr.
+Gofer it
+	smalltalkhubUser: 'Guille' project: 'Roll';
+	configurationOf: 'Roll';
+	loadVersion: #bleedingEdge.
+
+
 FileStream stdout << 'Installing Scale'; cr.
 Gofer it
 	repository: (MCFileTreeRepository new 
