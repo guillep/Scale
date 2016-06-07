@@ -3,6 +3,31 @@ Scale
 
 Scale is a little project that aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use it's power, and have a better syntax instead of the ugly bash one :).
 
+
+
+
+
+Installing
+----------
+
+For installing Scale you have to be SUDOER and to have internet connection. 
+
+```bash
+git clone https://github.com/guillep/Scale
+cd Scale
+./build/build.sh
+sudo ./build/install.st
+```
+
+After this installation process, the scale bin path  will be added to the path global variable, using the current user .bashrc file. 
+
+Open a new terminal, or resource your .bashrc file. 
+
+```bash
+	./Scale/examples/echoer.st
+```
+
+
 Examples
 -------
 
