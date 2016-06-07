@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/pharo/pharo Pharo.image scale "$@"
+/usr/bin/pharo/pharo /usr/bin/pharo/Pharo.image scale "$@"

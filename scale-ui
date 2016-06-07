@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+/usr/bin/pharo/pharo-ui /usr/bin/pharo/Pharo.image scale "$@ $PWD"

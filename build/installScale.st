@@ -1,26 +1,33 @@
 FileStream stdout << 'Installing FileTree'; cr.
 
-Gofer it
-	squeaksource3: 'MetaRepoForPharo20';
+"Gofer it
+	smalltalkhubUser: 'Pharo' project: 'MetaRepoForPharo50';
 	configurationOf: 'FileTree';
-	loadVersion: '1.0.5'.
-
+	loadVersion: #stable.
+"
 FileStream stdout << 'Installing OSProcess'; cr.
 Gofer it
-	squeaksource3: 'MetaRepoForPharo20';
+	smalltalkhubUser: 'Pharo' project: 'MetaRepoForPharo50';
 	configurationOf: 'OSProcess';
-	loadVersion: '4.5.8'.
+	loadVersion: #stable.
 
-FileStream stdout << 'Installing TaskIT'; cr.
+FileStream stdout << 'Installing TaskIT2'; cr.
 Gofer it
-	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT';
-	configurationOf: 'TaskIT';
+	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
+	configurationOf: 'TaskIT2';
+	loadVersion: #stable.
+
+FileStream stdout << 'Installing TaskIT2Shell'; cr.
+Gofer it
+	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
+	configurationOf: 'TaskIT2Shell';
 	loadVersion: #bleedingEdge.
+
 
 FileStream stdout << 'Installing Scale'; cr.
 Gofer it
 	repository: (MCFileTreeRepository new 
-					directory: FileSystem workingDirectory / 'src';
+					directory: FileSystem workingDirectory / '..'/ 'src';
 					yourself);
 	package: 'Scale';
 	load.

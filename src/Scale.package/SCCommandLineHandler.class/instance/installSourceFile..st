@@ -4,13 +4,12 @@ installSourceFile: aReference
 
 	" parse the code given in the source file"
 
+	runner := SCScriptRunner new.
 	aReference
 		readStreamDo: [ :stream | 
 			stream peek = $#
 				ifTrue: [ stream upTo: Character lf ].
 			self
-				handleErrorsDuring: [ [ SCScriptRunner run: stream upToEnd ]
-						on: Error
-						do: [ :err | stderr << err messageText ]
+				handleErrorsDuring: [ runner run: stream upToEnd
 					"Compiler evaluate: stream upToEnd." ]
 				reference: aReference ]

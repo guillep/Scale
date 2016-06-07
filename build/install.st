@@ -1,5 +1,6 @@
 #!./build/scale-bootstrap
 
+" DEPLOY "
 system stdout << 'Deploying scale command';cr.
 
 scapeParentDirectory := '/usr/bin/scale' asFileReference.
@@ -28,6 +29,9 @@ ifTrue: [
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
 	system stdout << 'Done!'.
+
+" ADD TO THE PATH "
+	system call: ' echo "export PATH=$PATH:/usr/bin/scale" >> ~/.bashrc '.
 ].
 
 

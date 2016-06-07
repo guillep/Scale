@@ -2,5 +2,6 @@
 	"class" : {
 		"run:" : "GuillePolito 1/27/2014 10:53:15" },
 	"instance" : {
+		"exit:" : "SantiagoBragangolo 6/7/2016 13:02",
 		"initialize" : "SantiagoBragagnolo 6/2/2016 15:16",
 		"run:" : "SantiagoBragagnolo 6/2/2016 15:16" } }
