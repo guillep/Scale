@@ -27,6 +27,11 @@ Open a new terminal, or resource your .bashrc file.
 	./Scale/examples/echoer.st
 ```
 
+For uninstall Scale you just need to execute 
+```bash
+sudo ./Scale/build/install.st
+```
+
 
 Examples
 -------
