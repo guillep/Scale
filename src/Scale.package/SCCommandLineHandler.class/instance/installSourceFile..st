@@ -4,7 +4,7 @@ installSourceFile: aReference
 
 	" parse the code given in the source file"
 
-	runner := SCScriptRunner new.
+	runner := self createRunner.
 	aReference
 		readStreamDo: [ :stream | 
 			stream peek = $#

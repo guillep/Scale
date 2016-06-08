@@ -1,0 +1,3 @@
+installing
+createRunner
+	^ SCScriptRunner new

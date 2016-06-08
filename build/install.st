@@ -32,7 +32,7 @@ ifTrue: [
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo-vm/pharo') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
-	system call: 'chmod +w ' , (scaleParentDirectory / 'Pharo.changes') fullName.
+	system call: 'chmod a+w ' , (scaleParentDirectory / 'Pharo.changes') fullName.
 	system stdout << 'Done!'.
 
 " ADD TO THE PATH "
