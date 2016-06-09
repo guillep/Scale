@@ -1,3 +1,3 @@
-as yet unclassified
+utils - environment
 pwd
 	^ (OSProcess thisOSProcess environmentAt: 'PWD') asFileReference

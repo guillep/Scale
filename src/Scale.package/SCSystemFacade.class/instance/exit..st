@@ -1,4 +1,4 @@
-utils
+utils - finalization
 exit: aCode
 	aCode isInteger
 		ifFalse: [ self error: 'wrong exit code: ' , aCode asString ].

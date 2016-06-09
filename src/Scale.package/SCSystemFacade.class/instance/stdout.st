@@ -1,3 +1,3 @@
-utils
+utils - streams
 stdout
 	^ FileStream stdout

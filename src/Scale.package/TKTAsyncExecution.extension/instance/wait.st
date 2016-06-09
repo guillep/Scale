@@ -1,3 +1,3 @@
 *Scale
 wait
-	1 second wait.
+	semaphore wait. 
