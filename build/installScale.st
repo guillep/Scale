@@ -15,7 +15,7 @@ FileStream stdout << 'Installing TaskIT2'; cr.
 Gofer it
 	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
 	configurationOf: 'TaskIT2';
-	loadVersion: #stable.
+	loadVersion: #bleedingEdge.
 
 FileStream stdout << 'Installing TaskIT2Shell'; cr.
 Gofer it

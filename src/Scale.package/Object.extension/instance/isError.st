@@ -1,0 +1,3 @@
+*Scale
+isError
+	^ false.
