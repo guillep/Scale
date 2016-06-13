@@ -4,7 +4,6 @@ installSourceFile: aReference
 
 	" parse the code given in the source file"
 
-	runner := self createRunner.
 	aReference
 		readStreamDo: [ :stream | 
 			stream peek = $#
