@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-/usr/bin/pharo/pharo-ui /usr/bin/scale/Pharo.image scale "$@"
+/usr/bin/pharo/pharo-ui /usr/bin/scaleImage/Pharo.image scale "$@"

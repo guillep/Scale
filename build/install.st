@@ -3,15 +3,15 @@
 " DEPLOY "
 system stdout << 'Deploying scale command';cr.
 
-scaleParentDirectory := '/usr/bin/scale' asFileReference.
+scaleParentDirectory := '/usr/bin/scaleImage' asFileReference.
 
 scaleParentDirectory exists 
 ifTrue: [ 
 	system stderr << 'There is already an installation. Please uninstall before' 
 ] ifFalse: [
 	scaleParentDirectory ensureCreateDirectory.
-	scaleFile := scaleParentDirectory / 'scale'.
-	scaleUIFile := scaleParentDirectory / 'scale-ui'.
+	scaleFile := scaleParentDirectory / '..' / 'scale'.
+	scaleUIFile := scaleParentDirectory / '..' / 'scale-ui'.
 	system workingDirectory / '..' / 'scale'  copyTo: scaleFile.
 	system workingDirectory / '..' / 'scale-ui'  copyTo: scaleUIFile.
 	system stdout << 'Deploying Pharo';cr.
@@ -35,8 +35,7 @@ ifTrue: [
 	system call: 'chmod a+w ' , (scaleParentDirectory / 'Pharo.changes') fullName.
 	system stdout << 'Done!'.
 
-" ADD TO THE PATH "
-	system call: ' echo "export PATH=\$PATH:/usr/bin/scale" >> ~/.bashrc '.
+
 ].
 
 
