@@ -1,3 +1,5 @@
 utils - call commands
 scale: aScript
-	^ self call: self scalePath , ' ' , aScript
+	aScript asFileReference exists
+		ifTrue: [ ^ self call: self scalePath , ' ' , aScript ]
+		ifFalse: [ self error: aScript , ' is not a valid file script. ' ]

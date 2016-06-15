@@ -1,4 +1,4 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 system stdout << 'print to stdout';cr.
 

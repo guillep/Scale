@@ -1,4 +1,4 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 futurels := system callAsync: 'sleep 2 && ls -l'.
 futurels onSuccess: [ :ls | system stdout << ls ].

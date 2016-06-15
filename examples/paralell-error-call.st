@@ -1,4 +1,4 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 "notexistant command does not exist, and will fail"
 futurels := system callAsync: 'notexistant'.

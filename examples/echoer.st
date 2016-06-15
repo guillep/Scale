@@ -1,4 +1,4 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
 

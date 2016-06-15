@@ -1,4 +1,4 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 fact := [ :n | | fact1 |
 	fact1 := [ :partial :next |

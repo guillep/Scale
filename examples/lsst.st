@@ -1,6 +1,6 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
-system workingDirectory entries do: [ :entry |
+system pwd entries do: [ :entry |
 	system stdout << entry asString.
 	system stdout cr.
 ].

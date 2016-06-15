@@ -1,6 +1,6 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
-system stdout << 'llamando mal a cualquiercosa'.
+system stdout << 'Doing a wrong call'.
 system stdout cr.
 
 system scale: 'scalefails.st'.

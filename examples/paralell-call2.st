@@ -1,9 +1,11 @@
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 futurels := system callAsync: 'sleep 2 && ls -l'.
-futurels whenFinished: [ :ls | system stdout << 'finished the ls!';cr ].
+futurels onSuccess: [ :ls | system stdout << 'finished the ls!' << String crlf << ls lines first asString << String crlf. ].
 
 system stdout << 'just after the future call';cr.
 
-"Now we wait explicitly for the value of ls because we need it!"
-system stdout << futurels value lines first asString;cr.
+
+
+
+
