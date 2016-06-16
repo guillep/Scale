@@ -29,7 +29,7 @@ Open a new terminal, or resource your .bashrc file.
 
 For uninstall Scale you just need to execute 
 ```bash
-sudo ./Scale/build/install.st
+sudo ./Scale/build/uninstall.st
 ```
 
 
@@ -42,7 +42,7 @@ You can find a lot more of examples in the examples directory. Here we show you 
 #### Writing a program that interacts with stdin and stdout:
 
 ```bash
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
 
@@ -56,7 +56,7 @@ got := system stdin upTo: Character lf.
 #### Writing a program that calls ls -l
 
 ```bash
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
 (system call: 'ls -l') lines do: [ :line |
 	system stdout << line.
@@ -67,9 +67,9 @@ got := system stdin upTo: Character lf.
 #### Or doing the same directly in Pharo :D
 
 ```bash
-#!/usr/bin/scale/pharo
+#!/usr/bin/scale
 
-system workingDirectory entries do: [ :entry |
+system pwd entries do: [ :entry |
 	system stdout << entry asString.
 	system stdout cr.
 ].
@@ -82,4 +82,40 @@ TODO
 Loading
 -------
 
-TODO
+Wanting to code? 
+   For loading this project on a development image is really easy. Just execute the building script, it will give you as output an image in the directory called 'cache'. 
+   If you just want to install scale in an existing image, you just need to execute in this image the content of the building script installScale.st, located into the build folder. 
+
+
+```smalltalk
+
+Gofer it
+	smalltalkhubUser: 'Pharo' project: 'MetaRepoForPharo50';
+	configurationOf: 'OSProcess';
+	loadVersion: #stable.
+Gofer it
+	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
+	configurationOf: 'TaskIT2';
+	loadVersion: #bleedingEdge.
+Gofer it
+	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
+	configurationOf: 'TaskIT2Shell';
+	loadVersion: #bleedingEdge.
+Gofer it
+	smalltalkhubUser: 'Guille' project: 'Roll';
+	configurationOf: 'Roll';
+	loadVersion: #bleedingEdge.
+Gofer it
+	repository: (MCFileTreeRepository new 
+					directory: FileSystem workingDirectory / '..'/ 'src';
+					yourself);
+	package: 'Scale';
+	load.
+
+
+```
+
+Pay attention to change the address of the File repository for the Scale code. 
+
+
+
