@@ -4,6 +4,8 @@ Scale
 Scale is a little project that aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use it's power, and have a better syntax instead of the ugly bash one :).
 
 
+DISCLAIMER: Scale is tested only in Linux. 
+
 
 
 
