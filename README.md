@@ -41,7 +41,7 @@ You can find a lot more of examples in the examples directory. Here we show you 
 
 #### Writing a program that interacts with stdin and stdout:
 
-```bash
+```smalltalk
 #!/usr/bin/scale
 
 system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
@@ -55,7 +55,7 @@ got := system stdin upTo: Character lf.
 
 #### Writing a program that calls ls -l
 
-```bash
+```smalltalk
 #!/usr/bin/scale
 
 (system call: 'ls -l') lines do: [ :line |
@@ -66,7 +66,7 @@ got := system stdin upTo: Character lf.
 
 #### Or doing the same directly in Pharo :D
 
-```bash
+```smalltalk
 #!/usr/bin/scale
 
 system pwd entries do: [ :entry |
