@@ -1,12 +1,9 @@
 activation
 activate
-	self activateHelp.
+	self activateHelp ifTrue: [ self exitSuccess ].
+	self activateVersion ifTrue: [ self exitSuccess ].
+	
 	self commandLine arguments size = 0
-		ifTrue: [ self logCr: 'Loading REPL.'.
-			RORepl default
-				fullRepl;
-				loop ]
-		ifFalse: [ self loadSourceFiles: self commandLine arguments.
-			self installSourceFiles.
-			FileStream stdout cr ].
+		ifTrue: [ self roll ]
+		ifFalse: [ self executeScripts ].
 	self exitSuccess

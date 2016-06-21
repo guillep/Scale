@@ -1,0 +1,1 @@
+Script brower is a basic browser for managing scripts. 

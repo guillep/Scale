@@ -1,0 +1,14 @@
+{
+	"category" : "Scale-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
+	"instvars" : [
+		 ],
+	"name" : "SCBrowser",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

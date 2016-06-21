@@ -1,0 +1,1 @@
+This objects manages scale based scripts :). 

@@ -1,0 +1,1 @@
+This Manager shows and executes pharo regular code, as in a playground, but stored in your disk. 
