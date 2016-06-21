@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfScale",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfScale",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
