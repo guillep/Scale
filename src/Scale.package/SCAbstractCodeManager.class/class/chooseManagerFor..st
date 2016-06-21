@@ -5,5 +5,5 @@ chooseManagerFor: aContent
 	manager size > 1
 		ifTrue: [ self error: 'There are many managers for the given content! ' ].
 	manager size = 0
-		ifTrue: [ SCPharoCodeManager ].
+		ifTrue: [ ^ SCPharoCodeManager ].
 	^ manager first
