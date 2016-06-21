@@ -1,0 +1,14 @@
+{
+	"category" : "Scale-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SCWorldMenu",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

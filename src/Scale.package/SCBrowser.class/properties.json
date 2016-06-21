@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
 	"instvars" : [
-		 ],
+		"currentScript" ],
 	"name" : "SCBrowser",
 	"pools" : [
 		 ],

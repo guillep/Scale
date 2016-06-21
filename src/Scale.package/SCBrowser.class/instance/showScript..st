@@ -1,6 +1,7 @@
 as yet unclassified
 showScript: aScript
 	| browser stream fileContent |
+	currentScript := aScript.
 	stream := (aScript openWritable: false) readStream.
 	fileContent := stream upToEnd.
 	stream close.
