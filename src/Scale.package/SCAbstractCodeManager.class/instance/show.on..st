@@ -1,7 +1,14 @@
 as yet unclassified
-show: content on: a
+show: aScript on: a
 	^ a pharoScript
 		title: self title;
-		display: content;
+		display: aScript content;
 		smalltalkClass: [ self runnerClass ];
-		doItReceiver: [ self runnerInstance ]
+		doItReceiver: [ self runnerInstance ];
+		populate: #acceptedCode
+			icon: GLMUIThemeExtraIcons glamorousAccept
+			on: $s
+			entitled: 'Accept'
+			with: [ :text :script | 
+				script content: text text string.
+				script save ]

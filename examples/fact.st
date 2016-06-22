@@ -1,5 +1,7 @@
 #!/usr/bin/scale
 
+| fact |
+
 fact := [ :n | | fact1 |
 	fact1 := [ :partial :next |
 		next = 0
@@ -11,4 +13,4 @@ fact := [ :n | | fact1 |
 
 system stdout << (fact value: 18) asString.
 
-fact value:18.
+(fact value:18) inspect.

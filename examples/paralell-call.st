@@ -1,5 +1,6 @@
 #!/usr/bin/scale
 
+| futurels |
 futurels := system callAsync: 'sleep 2 && ls -l'.
 futurels onSuccess: [ :ls | system stdout << ls ].
 

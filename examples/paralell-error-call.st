@@ -1,5 +1,6 @@
 #!/usr/bin/scale
 
+| futurels | 
 "notexistant command does not exist, and will fail"
 futurels := system callAsync: 'notexistant'.
 futurels onSuccess: [ :ls | system stdout << ls ].

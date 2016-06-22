@@ -31,6 +31,5 @@ compose
 				from: #titles;
 				andShow: [ :a | 
 					a actionList
-						act: [ :container :dir :script | script run inspect ] entitled: 'Run';
-						act: [ :container :dir :script | script debug ] entitled: 'Debug';
-						act: [ :container :dir :script | script save ] entitled: 'Save' ] ]
+						act: [ :container :dir :script | script run ] entitled: 'Run';
+						act: [ :container :dir :script | script debug ] entitled: 'Debug' ] ]
