@@ -1,13 +1,12 @@
 {
 	"class" : {
-		"appliesTo:" : "SantiagoBragagnolo 6/20/2016 14:52",
+		"appliesTo:" : "SantiagoBragagnolo 6/22/2016 11:11",
 		"chooseManagerFor:" : "SantiagoBragagnolo 6/21/2016 15:09",
-		"cleanContent:" : "SantiagoBragagnolo 6/20/2016 14:36",
-		"createManagerFor:" : "SantiagoBragagnolo 6/20/2016 14:46" },
+		"instance" : "SantiagoBragagnolo 6/22/2016 11:13",
+		"managerFor:" : "SantiagoBragagnolo 6/22/2016 11:13" },
 	"instance" : {
-		"content" : "SantiagoBragagnolo 6/20/2016 14:36",
-		"content:" : "SantiagoBragagnolo 6/20/2016 13:55",
+		"run:" : "SantiagoBragagnolo 6/22/2016 11:38",
 		"runnerClass" : "SantiagoBragagnolo 6/20/2016 13:55",
 		"runnerInstance" : "SantiagoBragagnolo 6/20/2016 13:56",
-		"showOn:" : "SantiagoBragagnolo 6/20/2016 14:53",
+		"show:on:" : "SantiagoBragagnolo 6/22/2016 11:02",
 		"title" : "SantiagoBragagnolo 6/20/2016 13:55" } }

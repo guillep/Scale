@@ -1,0 +1,1 @@
+This is a script. It can recognice its kind of interpreter, it knows how to ask for a run, a debug or save it self into the disk 

@@ -1,3 +1,3 @@
 as yet unclassified
-appliesTo: content
-	^ (content indexOfSubCollection: self interpreter) > 0
+appliesTo: anInterpreterSelector
+	^ (anInterpreterSelector indexOfSubCollection: self interpreter) > 0

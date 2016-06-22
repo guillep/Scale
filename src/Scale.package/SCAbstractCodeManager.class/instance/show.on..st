@@ -1,7 +1,7 @@
 as yet unclassified
-showOn: a
+show: content on: a
 	^ a pharoScript
 		title: self title;
-		display: self content;
+		display: content;
 		smalltalkClass: [ self runnerClass ];
 		doItReceiver: [ self runnerInstance ]

@@ -1,0 +1,1 @@
+Adds tools> Scale > Script browser to the world menu 
