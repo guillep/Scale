@@ -1,0 +1,1 @@
+This is just an object that represents an image + vm. It has not much usage, since the user is the system facade. 
