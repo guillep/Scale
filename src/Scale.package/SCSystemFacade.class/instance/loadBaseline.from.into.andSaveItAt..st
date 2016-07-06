@@ -29,4 +29,4 @@ loadBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aD
 					{(#directory -> anImageBundle directory fullName).
 					(#script -> temporalBaselineScript fullName)} asDictionary).
 					
-	anImageBundle copyVMFilesTo: aDirectory .
+	anImageBundle copyVMFilesTo: aDirectory with: self.

@@ -20,4 +20,4 @@ execute: aString into: anImageBundle andSaveItAt: aDestination
 				format:
 					{(#directory -> anImageBundle directory fullName).
 					(#script -> script fullName)} asDictionary).
-	anImageBundle copyVMFilesTo: aDestination
+	anImageBundle copyVMFilesTo: aDestination with: self.
