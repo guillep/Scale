@@ -1,3 +1,3 @@
 utils - environment
 pwd
-	^ (OSProcess thisOSProcess environmentAt: 'PWD') asFileReference
+	^ (self environment: 'PWD') asFileReference
