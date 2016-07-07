@@ -1,0 +1,14 @@
+{
+	"category" : "Scale-FileResolver",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"changes" ],
+	"name" : "SCScaleResolver",
+	"pools" : [
+		 ],
+	"super" : "FileSystemResolver",
+	"type" : "normal" }
