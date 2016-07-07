@@ -1,7 +1,7 @@
 {
 	"category" : "Scale-FileResolver",
 	"classinstvars" : [
-		 ],
+		"default" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

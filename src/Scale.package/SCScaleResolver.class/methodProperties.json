@@ -1,7 +1,11 @@
 {
 	"class" : {
-		 },
+		"default" : "SantiagoBragagnolo 7/7/2016 17:30",
+		"initialize" : "SantiagoBragagnolo 7/7/2016 17:31",
+		"shutDown:" : "SantiagoBragagnolo 7/7/2016 17:31" },
 	"instance" : {
-		"changes" : "SantiagoBragagnolo 7/7/2016 17:04",
+		"changes" : "SantiagoBragagnolo 7/7/2016 17:25",
 		"changesName" : "SantiagoBragagnolo 7/7/2016 16:50",
+		"isWritable:" : "SantiagoBragagnolo 7/7/2016 17:22",
+		"shutDown:" : "SantiagoBragagnolo 7/7/2016 17:34",
 		"supportedOrigins" : "SantiagoBragagnolo 7/7/2016 16:41" } }
