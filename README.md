@@ -24,7 +24,7 @@ For installing Scale you have to be SUDOER and to have internet connection.
 ##ZeroConf 
  Because nobody likes to do it in more than one line. 
 ```bash
-  sudo wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | bash
+   wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
  ```
  
 ##Classic 
