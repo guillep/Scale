@@ -7,12 +7,29 @@ Scale is a little project that aims to take Pharo into the shell. That is, to wr
 DISCLAIMER: Scale is tested only in Linux. 
 
 
-
-
 Installing
 ----------
 
 For installing Scale you have to be SUDOER and to have internet connection. 
+
+
+
+# Development vs Usage
+
+  We have two flavors for installing Scale. ZeroConf, and Classic. 
+  If you want to see what is happening during the installation, or if you want to do your own modifications, you want to follow the classic guide. 
+  If you just want to use it, ZeroConf is your deal. 
+  
+
+##ZeroConf 
+ Because nobody likes to do it in more than one line. 
+```bash
+  sudo wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | bash
+ ```
+ 
+##Classic 
+
+
 
 ```bash
 git clone https://github.com/guillep/Scale
@@ -91,33 +108,15 @@ Wanting to code?
 
 ```smalltalk
 
-Gofer it
-	smalltalkhubUser: 'Pharo' project: 'MetaRepoForPharo50';
-	configurationOf: 'OSProcess';
-	loadVersion: #stable.
-Gofer it
-	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
-	configurationOf: 'TaskIT2';
-	loadVersion: #bleedingEdge.
-Gofer it
-	smalltalkhubUser: 'sbragagnolo' project: 'TaskIT2';
-	configurationOf: 'TaskIT2Shell';
-	loadVersion: #bleedingEdge.
-Gofer it
-	smalltalkhubUser: 'Guille' project: 'Roll';
-	configurationOf: 'Roll';
-	loadVersion: #bleedingEdge.
-Gofer it
-	repository: (MCFileTreeRepository new 
-					directory: FileSystem workingDirectory / '..'/ 'src';
-					yourself);
-	package: 'Scale';
-	load.
-
+Metacello new
+  baseline: 'Scale';
+  repository: 'github://guillep/Scale';
+  load.
 
 ```
 
-Pay attention to change the address of the File repository for the Scale code. 
+Or you may want to peek an eye to Iceberg project: https://github.com/npasserini/iceberg. :) 
+
 
 
 
