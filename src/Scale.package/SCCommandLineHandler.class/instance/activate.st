@@ -8,4 +8,6 @@ activate
 		ifTrue: [ Smalltalk isInteractive
 				ifFalse: [ self roll ] ]
 		ifFalse: [ self executeScripts ].
+	runner shouldSaveAfterRun
+		ifTrue: [ Smalltalk snapshot: true andQuit: false ].
 	self exitSuccess

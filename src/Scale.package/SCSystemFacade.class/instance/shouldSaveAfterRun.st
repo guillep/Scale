@@ -1,0 +1,3 @@
+utils - streams
+shouldSaveAfterRun
+	^ saveAfterRun

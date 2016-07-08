@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:21",
 	"instvars" : [
-		"resultsWaited" ],
+		"resultsWaited",
+		"saveAfterRun" ],
 	"name" : "SCSystemFacade",
 	"pools" : [
 		 ],
