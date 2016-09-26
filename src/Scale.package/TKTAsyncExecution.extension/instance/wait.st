@@ -1,3 +1,0 @@
-*Scale
-wait
-	semaphore wait. 

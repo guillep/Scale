@@ -1,7 +1,6 @@
 private
 externalCallFor: aCommand withInterpreter: anInterpreter
-	^ TKTShellCommand new
-		command: aCommand;
-		interpreter: anInterpreter;
-		yourself
-		
+	^ [ :spec | 
+	spec
+		command: anInterpreter;
+		arguments: aCommand ]

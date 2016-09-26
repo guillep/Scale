@@ -1,3 +1,3 @@
 private
 call: aCommand withInterpreter: anInterpreter
-	^ self call: aCommand withInterpreter: anInterpreter withExecutionMessage: #executeSync
+	^ (self privateCall: aCommand withInterpreter: anInterpreter) synchronizeTimeout: 10 seconds

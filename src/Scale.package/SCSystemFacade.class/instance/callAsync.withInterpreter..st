@@ -1,3 +1,3 @@
 private
 callAsync: aCommand withInterpreter: anInterpreter
-	^ self call: aCommand withInterpreter: anInterpreter withExecutionMessage: #executeAsync
+	^ self call: aCommand withInterpreter: anInterpreter

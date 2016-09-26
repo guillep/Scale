@@ -1,3 +1,3 @@
 running
 resolveOperativeSystemUserName
-	^ OSProcess thisOSProcess environmentAt: 'USER'
+	^ OSEnvironment current at: 'USER'

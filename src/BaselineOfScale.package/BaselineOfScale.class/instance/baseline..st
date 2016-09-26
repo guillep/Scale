@@ -5,13 +5,7 @@ baseline: spec
 		for: #common
 		do: [ spec blessing: #baseline.
 			spec
-				baseline: 'TaskIT2' with: [ spec repository: 'github://sbragagnolo/taskit-2:master' ];
-				baseline: 'TaskIT2Shell' with: [ spec repository: 'github://sbragagnolo/taskit-2:master' ];
-				project: 'OSProcess'
-					with: [ spec
-						className: #ConfigurationOfOSProcess;
-						versionString: #stable;
-						repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo50/main/' ];
+				baseline: 'TaskItShell' with: [ spec repository: 'github://sbragagnolo/taskit:dev-0.3' ];
 				project: 'Roll'
 					with: [ spec
 						className: #ConfigurationOfRoll;
