@@ -1,6 +1,3 @@
 private
 externalCallFor: aCommand withInterpreter: anInterpreter
-	^ [ :spec | 
-	spec
-		command: anInterpreter;
-		arguments: aCommand ]
+	^ [ :spec |  spec	command: anInterpreter; 	arguments: aCommand ] asOSTask future
