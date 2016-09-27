@@ -1,3 +1,3 @@
 utils - call commands
 bash: aScript
-	^ self call: aScript withInterpreter: ExternalUnixOSProcess defaultShellPath
+	^ self call: aScript withInterpreter: 'bash'
