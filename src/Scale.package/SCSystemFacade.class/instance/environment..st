@@ -1,3 +1,3 @@
 utils - environment
 environment: aString
-	^ (OSEnvironment current at: aString) 
+	^ (OSEnvironment current at: aString asString) 
