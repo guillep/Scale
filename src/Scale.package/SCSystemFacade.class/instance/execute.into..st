@@ -11,7 +11,7 @@ execute: aString into: anImageBundle
 		close.
 	self
 		call:
-			(' {directory}/pharo-ui {directory}/Pharo.image st {script}'
+			(' {directory}/pharo {directory}/Pharo.image st {script}'
 				format:
 					{(#directory -> anImageBundle directory fullName).
 					(#script -> script fullName)} asDictionary).
