@@ -1,7 +1,10 @@
 util - execute third pharo
 execute: aString into: anImageBundle
 	| script stream |
-	script := (#/ asFileReference / #tmp / self hash asString , 'Script.st')
+	script := #/ asFileReference / #tmp / UUID new asString , 'Script.st'.
+	script exists
+		ifTrue: [ script delete ].
+	script
 		ensureCreateFile;
 		yourself.
 	stream := script writeStream.
@@ -14,4 +17,4 @@ execute: aString into: anImageBundle
 			(' {directory}/pharo {directory}/Pharo.image st {script}'
 				format:
 					{(#directory -> anImageBundle directory fullName).
-					(#script -> script fullName)} asDictionary).
+					(#script -> script fullName)} asDictionary)
