@@ -1,6 +1,12 @@
 util - load pharo
 loadBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aDirectory
 	| temporalBaselineScript writing |
+	"
+		This method loads a baseline in a given bundle (Image+Vm), and it saves the bundle result (newImage+sameVm) into a given directory, ensuring that the nase bundle will not be, at least that the destination is the place of the original bundle. In that case it will be overrited. 
+		
+		For doing this it uses the ST commandline handler (meaning that it will not work with Pharo 2.0 or lesser).
+		The loading of this code is done in headless mode. 
+	"
 	temporalBaselineScript := #/ asFileReference / #tmp / self hash asString , 'Baseline.st'.
 	writing := temporalBaselineScript writeStream.
 	writing

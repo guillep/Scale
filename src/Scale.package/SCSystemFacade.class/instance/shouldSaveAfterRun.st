@@ -1,3 +1,3 @@
-utils - streams
+private
 shouldSaveAfterRun
 	^ saveAfterRun

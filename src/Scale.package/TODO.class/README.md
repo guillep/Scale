@@ -13,3 +13,13 @@ import de variables de otros scripts scale
 Save issues.
 
 Coral?
+
+
+system loadFromCatalog: 'file'.
+
+import file: '' as: #module .
+module function evaluate with: and: and: and: .
+define name: [ :value | lalala lalala ].
+name call: #(1).
+call bash: ''.
+
