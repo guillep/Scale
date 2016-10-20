@@ -9,6 +9,6 @@ installSourceFile: aReference
 			stream peek = $#
 				ifTrue: [ stream upTo: Character lf ].
 			self
-				handleErrorsDuring: [ runner run: stream upToEnd arguments: commandLine
+				handleErrorsDuring: [ runner run: stream upToEnd
 					"Compiler evaluate: stream upToEnd." ]
 				reference: aReference ]

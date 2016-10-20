@@ -6,5 +6,5 @@
 	
 	version := system arguments optionAt: #v ifAbsent: [ 50 ].
 	destination := system arguments optionAt: #d ifPresent: [: op | op asFileReference ]ifAbsent: [ system pwd ].
-	system stdout << 'Downloading ' << version asString << ' into: ' << destination fullName.
-	system loadPharo: version into: destination.<
+	system stdout << 'Downloading ' << version asString << ' into: ' << destination fullName; flush.
+	system loadPharo: version into: destination.

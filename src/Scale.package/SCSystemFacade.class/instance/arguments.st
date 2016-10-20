@@ -11,4 +11,4 @@ arguments
 		
 		It gives the rest of arguments. Flags and values. It does not do any difference .
 	"
-	^ arguments
+	^ Smalltalk arguments

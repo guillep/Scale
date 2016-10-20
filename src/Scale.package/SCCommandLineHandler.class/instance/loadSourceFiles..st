@@ -1,11 +1,9 @@
 activation
 loadSourceFiles: anArray
-	sourceFiles := anArray
-		collect: [ :each | 
-			each asFileReference exists
-				ifTrue: [ each asFileReference ]
-				ifFalse: [ | relative |
-					relative := (OSEnvironment current at: 'PWD') asFileReference / each.
-					relative exists
-						ifTrue: [ relative ]
-						ifFalse: [ self error: 'CANNOT FIND FILE ' , each ] ] ]
+	sourceFiles := (anArray
+		select: [ :each | each asFileReference exists ]
+		thenCollect: [ :each | each asFileReference ])
+		,
+			(anArray
+				select: [ :each | ((OSEnvironment current at: 'PWD') asFileReference / each) exists ]
+				thenCollect: [ :each | (OSEnvironment current at: 'PWD') asFileReference / each ])
