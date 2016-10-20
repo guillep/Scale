@@ -94,9 +94,34 @@ system pwd entries do: [ :entry |
 ].
 ```
 
-Reference
--------
-TODO
+
+#### Asking for an asynchrouns call! 
+
+```smalltalk
+#!/usr/bin/scale
+
+| futurels |
+ futurels := system callAsync: 'sleep 2 && ls -l'.
+ futurels onSuccessDo: [ :ls | system stdout << ls ].
+ system stdout << 'just after the future call';cr.
+
+```
+
+
+
+#### Downloading new images, and using options :) 
+
+```smalltalk
+#!/usr/bin/scale
+
+| version  |
+	
+  version := (system arguments optionAt: #v ifAbsent: [ 50 ]) asInteger.
+  system stdout << 'Downloading ' << version asString << ' into: ' << system pwd fullName; flush.
+  system loadPharo: version into: system pwd.
+
+```
+
 
 Loading
 -------
