@@ -1,7 +1,6 @@
 as yet unclassified
 showScript: aScript
 	| browser |
-	currentScript := aScript.
 	browser := GLMTabulator new.
 	browser row: #code span: 2.
 	browser transmit

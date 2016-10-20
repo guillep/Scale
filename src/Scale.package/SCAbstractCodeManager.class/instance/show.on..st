@@ -10,5 +10,6 @@ show: aScript on: a
 			on: $s
 			entitled: 'Accept'
 			with: [ :text :script | 
+				a update.
 				script content: text text string.
 				script save ]

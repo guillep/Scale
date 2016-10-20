@@ -5,18 +5,22 @@ compose
 	self tabulator
 		with: [ :browser | 
 			browser
+				row: #scriptdir size: 30;
 				row: [ :r | 
 					r
-						column: #scriptdir;
-						column: #toolbar span: 4 ]
+						column: [ :c | c row: #buttons ] size: 150;
+						column: #toolbar span: 2 ]
 					size: 40;
 				row: [ :r | 
 					r
-						column: #titles;
+						column: #titles size: 150;
 						column: #example span: 4 ].
 			browser transmit
+				to: #buttons;
+				andShow: [ :a :b | a actionList act: [ :container :dir | self createNewScript: dir ] entitled: 'New' ].
+			browser transmit
 				to: #scriptdir;
-				andShow: [ :a :b | a label display: b ].
+				andShow: [ :a :b | a label display: b fullName ].
 			browser transmit
 				to: #titles;
 				andShow: [ :a | self scriptListIn: a ].
@@ -32,4 +36,5 @@ compose
 				andShow: [ :a | 
 					a actionList
 						act: [ :container :dir :script | script run ] entitled: 'Run';
-						act: [ :container :dir :script | script debug ] entitled: 'Debug' ] ]
+						act: [ :container :dir :script | script debug ] entitled: 'Debug';
+						act: [ :container :dir :script | self deleteScript: script ] entitled: 'Delete' ] ]

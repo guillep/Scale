@@ -2,8 +2,10 @@
 	"class" : {
 		"open" : "SantiagoBragagnolo 6/21/2016 11:53" },
 	"instance" : {
-		"compose" : "SantiagoBragagnolo 6/22/2016 18:08",
+		"compose" : "SantiagoBragagnolo 10/20/2016 15:19",
+		"createNewScript:" : "SantiagoBragagnolo 10/20/2016 14:53",
+		"deleteScript:" : "SantiagoBragagnolo 10/20/2016 14:48",
 		"fetchScriptReferencesFrom:" : "SantiagoBragagnolo 6/22/2016 11:23",
 		"scriptIn:" : "SantiagoBragagnolo 6/20/2016 11:10",
-		"scriptListIn:" : "SantiagoBragagnolo 6/20/2016 10:50",
-		"showScript:" : "SantiagoBragagnolo 6/22/2016 11:28" } }
+		"scriptListIn:" : "SantiagoBragagnolo 10/20/2016 13:53",
+		"showScript:" : "SantiagoBragagnolo 10/20/2016 15:18" } }
