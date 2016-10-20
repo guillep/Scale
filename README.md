@@ -122,6 +122,35 @@ system pwd entries do: [ :entry |
 
 ```
 
+Doing your scripts
+------------------
+
+So for writing down your own scripts you can do it by editing a file with your favorite editor or you can use scale-ui. 
+```bash
+user$ scale-ui <scripts-folder-path>
+```
+
+Scale-ui will open the image of the scale tool in graphic mode, with a script browser as shown in the following images. 
+
+![Please add an issue. Image is not loading!][image-browser]
+
+This browser allows you to edit your scripts while browsing the system façade code, for knowing what's there ready to use. 
+
+This browser as well allows you to create a new scripts,
+
+![Please add an issue. Image is not loading!][image-create]
+![Please add an issue. Image is not loading!][image-created]
+
+delete an existant script and run or debug scripts on your folder. 
+![Please add an issue. Image is not loading!][image-debug].
+
+During this session you may close the browser or want to open many others for different browsers (Future implementations will be happier in this aspect)
+
+For accessing this browser from the world menu, go WorldMenu> Tools> Scale> Script Browser
+
+![Please add an issue. Image is not loading!][image-menu]
+
+
 
 Loading
 -------
@@ -142,6 +171,15 @@ Metacello new
 
 Or you may want to peek an eye to Iceberg project: https://github.com/npasserini/iceberg. :) 
 
+
+
+
+
+[image-browser]: https://github.com/guillep/Scale/raw/master/images/image1.png "Browser1"
+[image-debug]: https://github.com/guillep/Scale/raw/master/images/image2.png "Debugger"
+[image-create]: https://github.com/guillep/Scale/raw/master/images/image3.png "Filecreate"
+[image-created]: https://github.com/guillep/Scale/raw/master/images/image4.png "Filecreated"
+[image-menu]: https://github.com/guillep/Scale/raw/master/images/image5.png "Menu"
 
 
 
