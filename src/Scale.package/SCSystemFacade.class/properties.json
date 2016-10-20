@@ -7,7 +7,8 @@
 	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:21",
 	"instvars" : [
 		"resultsWaited",
-		"saveAfterRun" ],
+		"saveAfterRun",
+		"arguments" ],
 	"name" : "SCSystemFacade",
 	"pools" : [
 		 ],
