@@ -1,0 +1,52 @@
+language: c
+os:
+  - linux
+sudo: true
+addons:
+  apt:
+    packages:
+      - lib32asound2
+      - lib32z1
+      - lib32bz2-1.0
+      - libssl1.0.0:i386
+      - libfreetype6:i386
+
+install: 
+  - sudo ./setupScale
+script:
+ - ./examples/lsst.st
+ - ./examples/ls.st
+ - ./examples/fact.st
+ - ./examples/download.st -v 60
+ - ./examples/paralell-call.st
+ - ./examples/paralell-call2.st
+ - ./examples/stdout.st
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
