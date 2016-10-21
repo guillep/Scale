@@ -9,7 +9,7 @@ fi
 echo "*********************************************"
 echo "* cloning repository " 
 echo "*********************************************"
-git clone --branch v0.1 https://github.com/guillep/Scale /tmp/scale 
+git clone https://github.com/guillep/Scale /tmp/scale 
 cd /tmp/scale
 echo "*********************************************"
 echo "* building scale image  " 
