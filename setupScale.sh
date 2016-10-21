@@ -18,7 +18,7 @@ echo "*********************************************"
 echo "*********************************************"
 echo "* checking if there is any old installation " 
 echo "*********************************************"
-./build/scale-bootstrap build/local-uninstall.st
+./build/scale-bootstrap build/uninstall.st
 echo "*********************************************"
 echo "* Copying files!  " 
 echo "*********************************************"
