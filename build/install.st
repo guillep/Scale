@@ -1,5 +1,7 @@
 #!./build/scale-bootstrap
 
+| scaleParentDirectory scaleFile scaleUIFile pharoParentDirectory|
+
 " DEPLOY "
 system stdout << 'Deploying scale command';cr.
 
@@ -14,7 +16,7 @@ ifTrue: [
 	scaleUIFile := scaleParentDirectory / '..' / 'scale-ui'.
 	system workingDirectory / '..' / 'scale'  copyTo: scaleFile.
 	system workingDirectory / '..' / 'scale-ui'  copyTo: scaleUIFile.
-  system workingDirectory / 'uninstall.st' copyTo: scaleParentDirectory / 'uninstall.st'.
+  system workingDirectory / '..' / #build / 'uninstall.st' copyTo: scaleParentDirectory / 'uninstall.st'.
 	system stdout << 'Deploying Pharo';cr.
 
 	pharoParentDirectory := '/usr/bin/pharo' asFileReference.
@@ -31,6 +33,7 @@ ifTrue: [
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo') fullName.
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo-ui') fullName.
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo-vm/pharo') fullName.
+  system call: 'chmod +x ', (scaleParentDirectory / 'uninstall.st') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
 	system stdout << 'Done!'.
