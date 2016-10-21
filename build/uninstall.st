@@ -3,6 +3,8 @@
 
 system stdout << 'Uninstalling scale' << String cr.
 
+system saveImageAs: #/ asFileReference / #tmp / #'uninstall.image'.
+" The image must be stored elsewhere for deleting all the files "
 
 scapeParentDirectory := '/usr/bin/scaleImage' asFileReference.
 pharoParentDirectory := '/usr/bin/pharo' asFileReference.
@@ -15,4 +17,3 @@ scaleX exists ifTrue: [ system call: ' rm  ', scaleX fullName  ].
 scaleuiX exists ifTrue: [ system call: ' rm  ', scaleuiX fullName  ].
 
 system stdout << 'Done!' << String cr.
-

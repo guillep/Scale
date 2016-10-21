@@ -1,4 +1,4 @@
-#!./build/scale-bootstrap
+#!/usr/bin/scale
 
 | scaleParentDirectory scaleFile scaleUIFile pharoParentDirectory|
 
