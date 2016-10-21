@@ -26,9 +26,8 @@ For installing Scale you have to be SUDOER and to have internet connection.
 ```bash
    wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
  ```
- 
+  The 
 ##Classic 
-
 
 
 ```bash
@@ -38,18 +37,81 @@ cd Scale
 sudo ./build/install.st
 ```
 
-After this installation process, the scale bin path  will be added to the path global variable, using the current user .bashrc file. 
 
-Open a new terminal, or resource your .bashrc file. 
+## Checking the installation 
 
 ```bash
-	./Scale/examples/echoer.st
+$> scale --version
+Scale 0.1 for Pharo5.0
+$> scale --help
+Scale - Executing pharo scripts
+=========================================================
+
+scale [ options | script-path  [ script-options]  ] 
+
+[options] 
+	--version	prints the version
+	--help		prints this help 
+
+[ example ] 
+	$> scale /path/to/script.st  --script-option=1
+
+Scale-UI (For debugging and code edition)
+=========================================================
+
+scale-ui [ script-path  [ script-options]  | folder ] 
+
+[ script-example ] 
+	$>scale-ui /path/to/script.st  --script-option=1
+
+[ folder-example ]
+	$>scale-ui /path/to/my-script/folder 
 ```
 
-For uninstall Scale you just need to execute 
+
+
+## Installation folders
+
+Scale installs it self in /usr/bin folder, adding the following files and directories: 
+
+/usr/bin
+├── pharo
+│   └── pharo-vm
+│        ├── libB3DAcceleratorPlugin.so
+│        ├── libFT2Plugin.so
+│        ├── libgit2.so.0
+│        ├── libInternetConfigPlugin.so
+│        ├── libJPEGReaderPlugin.so
+│        ├── libJPEGReadWriter2Plugin.so
+│        ├── libRePlugin.so
+│        ├── libSDL2-2.0.so.0
+│        ├── libSDL2-2.0.so.0.2.1
+│        ├── libSDL2DisplayPlugin.so
+│        ├── libSqueakSSL.so
+│        ├── libssh2.so.1
+│        ├── libSurfacePlugin.so
+│        ├── pharo
+│        ├── PharoV50.sources
+│        ├── vm-display-null
+│        ├── vm-display-X11
+│        ├── vm-sound-ALSA
+│        └── vm-sound-null
+├── scale
+├── scale-ui
+└── scaleImage
+	 ├── uninstall.st
+         ├── Pharo.image
+         └── Pharo.changes
+
+Since the installation process is mean to address /usr/bin as installation folder, there is no need for adding any information to the PATH variable.
+
+
+## Uninstall Scale 
 ```bash
-sudo ./Scale/build/uninstall.st
+sudo /usr/bin/scaleImage/uninstall.st
 ```
+
+
 
 
 Examples
