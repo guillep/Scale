@@ -14,6 +14,7 @@ ifTrue: [
 	scaleUIFile := scaleParentDirectory / '..' / 'scale-ui'.
 	system workingDirectory / '..' / 'scale'  copyTo: scaleFile.
 	system workingDirectory / '..' / 'scale-ui'  copyTo: scaleUIFile.
+  system workingDirectory / 'uninstall.st' copyTo: scaleParentDirectory / 'uninstall.st'.
 	system stdout << 'Deploying Pharo';cr.
 
 	pharoParentDirectory := '/usr/bin/pharo' asFileReference.
