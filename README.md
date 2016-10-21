@@ -100,7 +100,7 @@ Scale installs it self in /usr/bin folder, adding the following files and direct
 ├── scale
 ├── scale-ui
 └── scaleImage
-	 ├── uninstall.st
+         ├── uninstall.st
          ├── Pharo.image
          └── Pharo.changes
 
