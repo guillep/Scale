@@ -6,6 +6,6 @@ manageInteractive: arguments
 		ifTrue: [ (OSEnvironment current at: 'PWD') asFileReference / dir ]
 		ifFalse: [ dir asFileReference ].
 	^ dir isDirectory
-		ifTrue: [ SCBrowser openOn: dir.
+		ifTrue: [ (SCBrowser openOn: dir) maximize.
 			true ]
-		ifFalse: [ false ]
+		ifFalse: [ SCBrowser open maximize ]

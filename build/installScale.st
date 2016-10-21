@@ -1,5 +1,7 @@
 
+SystemWindow allSubInstancesDo: #close. 
 Metacello new
+
   baseline: 'Scale';
   repository: 'filetree://', (FileSystem workingDirectory / '..'/ 'src') fullName;
   onConflict: [:ex | ex allow];
