@@ -1,5 +1,5 @@
 #!./build/scale-bootstrap
-
+| scapeParentDirectory pharoParentDirectory scaleX scaleuiX |
 
 system stdout << 'Uninstalling scale' << String cr.
 
