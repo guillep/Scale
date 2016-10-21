@@ -12,7 +12,7 @@ addons:
       - libfreetype6:i386
 
 install: 
-  - sudo ./setupScale
+  - sudo ./setupScale.sh
 script:
  - ./examples/lsst.st
  - ./examples/ls.st
