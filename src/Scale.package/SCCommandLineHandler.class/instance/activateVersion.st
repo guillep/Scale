@@ -1,9 +1,10 @@
 activation
-activateVersion
+activateVersion 
 	(self hasOption: 'version')
-		ifTrue: [ self stdout
+		ifTrue: [ FileStream stdout
 				nextPutAll: 'Scale 0.1 for ';
 				nextPutAll: Smalltalk version;
+				flush;
 				cr.
 			^ true ].
 	^ false
