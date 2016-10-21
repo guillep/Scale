@@ -74,6 +74,7 @@ scale-ui [ script-path  [ script-options]  | folder ]
 
 Scale installs it self in /usr/bin folder, adding the following files and directories: 
 
+```bash
 /usr/bin
 ├── pharo
 │   └── pharo-vm
@@ -102,6 +103,8 @@ Scale installs it self in /usr/bin folder, adding the following files and direct
 	 ├── uninstall.st
          ├── Pharo.image
          └── Pharo.changes
+
+```
 
 Since the installation process is mean to address /usr/bin as installation folder, there is no need for adding any information to the PATH variable.
 
