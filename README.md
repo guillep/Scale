@@ -1,3 +1,7 @@
+
+[![Build Status](https://travis-ci.org/guillep/Scale.svg?branch=master)](https://travis-ci.org/guillep/Scale)
+
+
 Scale
 =====
 
@@ -206,55 +210,79 @@ stdin " It returns the instance of the stdin stream"
 ```smalltalk
 chmod: aPermissionString to: aFileReferenceOrStringPattern "Chmod command for basic usage."
 ln: aTargetReference to: aLinkReference "ln command for symlink usage."
-untargz: aFileReference to: aDestinationReference "Typical command for decompressing a regular tar+gunzip file" 
-untargz: aFileReference  "Typical command for decompressing a regular tar+gunzip file on a temp directory"
-unzip: aFileReference to: aDestinationReference "Typical command for decompressing a regular zip file"
-unzip: aFileReference "Typical command for decompressing a regular tar+gunzip file on a temp directory on a temp directory"
-wget: anUrl to: outFileReference "fetch a file from an url by using wget. and saving it in a given destination"
-wget: anUrl "fetch a file from an url by using wget. and saving it in a temporal destination"
-wget: anURL andUntargz: aDestination "fetch a file from an url by using wget.And saving it in a temporal destination and it tries to decompress it from a tar-gz format"
-wget: anURL andUnzip: aDestination " fetch a file from an url by using wget. And saving it in a temporal destination and it tries to decompress it from a zip format"
+untargz: aFileReference to: aDestinationReference "Typical command for decompressing 
+a regular tar+gunzip file" 
+untargz: aFileReference  "Typical command for decompressing a regular tar+gunzip 
+file on a temp directory"
+unzip: aFileReference to: aDestinationReference "Typical command for decompressing a 
+regular zip file"
+unzip: aFileReference "Typical command for decompressing a regular tar+gunzip file on 
+a temp directory on a temp directory"
+wget: anUrl to: outFileReference "fetch a file from an url by using wget. and saving 
+it in a given destination"
+wget: anUrl "fetch a file from an url by using wget. and saving it in a temporal 
+destination"
+wget: anURL andUntargz: aDestination "fetch a file from an url by using wget.And saving 
+it in a temporal destination and it tries to decompress it from a tar-gz format"
+wget: anURL andUnzip: aDestination " fetch a file from an url by using wget. And saving 
+it in a temporal destination and it tries to decompress it from a zip format"
 ```
 ## Util-Execute third pharo
 ```smalltalk
-execute: aString into: anImageBundle "Executes a given string content into an given image."
-execute: aString into: anImageBundle andSaveItAt: aDestination "Executes a given string content into an given image. then saves this image in the given destination"
+execute: aString into: anImageBundle "Executes a given string content into an given 
+image."
+execute: aString into: anImageBundle andSaveItAt: aDestination "Executes a given 
+string content into an given image. then saves this image in the given destination"
 ```
 ## Util-Load pharo
 ```smalltalk
-loadPharo: aVersion into: aFileReference " Downloads a pharo image+bundle of the given version into a given destination. It returns an image bundle object"
-loadBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aDirectory " It loads the pointed baseline from the pointed repository and saves the image into the given destination. It returns an image bundle object "
-loadUIBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aDirectory " It loads the pointed baseline from the pointed repository in GRAPHICAL mode, then it saves the image into the given destination. It returns an image bundle object "
+loadPharo: aVersion into: aFileReference " Downloads a pharo image+bundle of the given 
+version into a given destination. It returns an image bundle object"
+loadBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aDirectory 
+" It loads the pointed baseline from the pointed repository and saves the image into 
+the given destination. It returns an image bundle object "
+loadUIBaseline: aPackageName from: aRepository into: anImageBundle andSaveItAt: aDirectory 
+" It loads the pointed baseline from the pointed repository in GRAPHICAL mode, 
+then it saves the image into the given destination. It returns an image bundle object "
 ```
 ## Util-Call commands 
 ```smalltalk
 bash: aString " It executes synchronously a given string in a fresh bash instance " 
-call: aString " It executes synchronously a given string in a fresh default-interpreter instance " 
-callAsync: aString " It executes Asynchronously a given string in a fresh default-interpreter instance " 
-scale: aScript " It executes synchronously a given scale script FILE in a fresh scale instance " 
+call: aString " It executes synchronously a given string in a fresh default-interpreter 
+instance " 
+callAsync: aString " It executes Asynchronously a given string in a fresh 
+default-interpreter instance " 
+scale: aScript " It executes synchronously a given scale script FILE in a fresh 
+scale instance " 
 ```
 ## Util-Environment
 ```smalltalk
 environment: aString "It returns the value of the given environment variable name" 
 home " It returns the home of the current user" 
-workingDirectory " It returns the pharo-working directory (the vm folder)
-pwd "It returns directory where the user was at the moment of the execution of the script (the PWD environment variable) 
+workingDirectory " It returns the pharo-working directory (the vm folder)"
+pwd "It returns directory where the user was at the moment of the execution of 
+the script (the PWD environment variable) "
 ```
 ## Util-Finalization
 ```smalltalk
-exit: anErrorCode " It finishes scale given the error code to the operative system. 
+exit: anErrorCode " It finishes scale given the error code to the operative system. "
 ```
 
 ## Util-Image
 ```smalltalk
-saveAfterRun  " It set the mode of running to save after the execution of the script and the end of any parallel process registered for join by this script" 
+saveAfterRun  " It set the mode of running to save after the execution of the 
+script and the end of any parallel process registered for join by this script" 
 saveImageAs: aFileReference " It saves the running image into a given destination" 
 ```
 
 ## Convenience
 ```smalltalk
-registerProcessToJoin: aFuture "In your script you may want to use the force of TaskIT that is integrated into this application. This method allows you to register processes that you need to be finished before the image exits, but after the end of the script ".
-messageSend: aSelector "It returns a message send with the selector and the system object as receiver. Useful for building callbacks" 
+registerProcessToJoin: aFuture "In your script you may want to use the force of 
+TaskIT that is integrated into this application. This method allows you to register 
+processes that you need to be finished before the image exits, but after the end 
+of the script ".
+messageSend: aSelector "It returns a message send with the selector and the system 
+object as receiver. Useful for building callbacks" 
 uimanager "It returns the uimanager" 
 ```
 
