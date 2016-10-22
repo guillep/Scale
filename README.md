@@ -110,7 +110,7 @@ Scale installs it self in /usr/bin folder, adding the following files and direct
 
 ```
 
-Since the installation process is mean to address /usr/bin as installation folder, there is no need for adding any information to the PATH variable.
+Since the installation process is supposed to address /usr/bin as installation folder, there is no need for adding any information to the PATH variable.
 
 
 ## Uninstall Scale 
@@ -124,7 +124,7 @@ sudo /usr/bin/scaleImage/uninstall.st
 Examples
 -------
 
-You can find a lot more of examples in the examples directory. Here we show you a bunch of them
+You can find a lot more examples in the examples directory. Here we show you a bunch of them
 
 
 #### Writing a program that interacts with stdin and stdout:
@@ -300,12 +300,12 @@ Scale-ui will open the image of the scale tool in graphic mode, with a script br
 
 This browser allows you to edit your scripts while browsing the system façade code, for knowing what's there ready to use. 
 
-This browser as well allows you to create a new scripts,
+This browser as well allows you to create a new script,
 
 ![Please add an issue. Image is not loading!][image-create]
 ![Please add an issue. Image is not loading!][image-created]
 
-delete an existant script and run or debug scripts on your folder. 
+delete an existing script and run or debug scripts on your folder. 
 ![Please add an issue. Image is not loading!][image-debug].
 
 During this session you may close the browser or want to open many others for different browsers (Future implementations will be happier in this aspect)
@@ -322,7 +322,7 @@ Loading
 -------
 
 Wanting to code? 
-   For loading this project on a development image is really easy. Just execute the building script, it will give you as output an image in the directory called 'cache'. 
+   Loading this project in a development image is really easy. Just execute the build script, it will give you as output an image in the directory called 'cache'. 
    If you just want to install scale in an existing image, you just need to execute in this image the content of the building script installScale.st, located into the build folder. 
 
 
