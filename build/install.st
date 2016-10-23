@@ -36,8 +36,8 @@ ifTrue: [
   system call: 'chmod +x ', (scaleParentDirectory / 'uninstall.st') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
-	system ln: scaleFile to: '/usr/local/bin/scale'.
-	system ln: scaleUIFile to: '/usr/local/bin/scale-ui'.
+	system ln: scaleFile to: '/usr/local/bin/scale' asFileReference.
+	system ln: scaleUIFile to: '/usr/local/bin/scale-ui' asFileReference.
 	system stdout << 'Done!'.
 
 
