@@ -38,7 +38,7 @@ For installing Scale you have to be SUDOER and to have internet connection.
 git clone https://github.com/guillep/Scale
 cd Scale
 ./build/build.sh
-sudo ./build/install.st
+sudo ./build/scale-bootstrap ./build/install.st
 ```
 
 
