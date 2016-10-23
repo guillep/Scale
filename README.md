@@ -76,10 +76,13 @@ scale-ui [ script-path  [ script-options]  | folder ]
 
 ## Installation folders
 
-Scale installs it self in /usr/bin folder, adding the following files and directories: 
+Scale installs it self in /usr/local/bin folder, adding the following files and directories: 
 
 ```bash
-/usr/bin
+/usr/local
+├── bin
+│   └── scale
+│   └── scale-ui
 ├── pharo
 │   └── pharo-vm
 │        ├── libB3DAcceleratorPlugin.so
@@ -101,21 +104,21 @@ Scale installs it self in /usr/bin folder, adding the following files and direct
 │        ├── vm-display-X11
 │        ├── vm-sound-ALSA
 │        └── vm-sound-null
-├── scale
-├── scale-ui
-└── scaleImage
+└── scale
          ├── uninstall.st
+         ├── scale
+	 ├── scale-ui
          ├── Pharo.image
          └── Pharo.changes
 
 ```
 
-Since the installation process is supposed to address /usr/bin as installation folder, there is no need for adding any information to the PATH variable.
+Since the installation process is supposed to address /usr/local/bin as installation folder, there is no need for adding any information to the PATH variable.
 
 
 ## Uninstall Scale 
 ```bash
-sudo /usr/bin/scaleImage/uninstall.st
+sudo /usr/local/scale/uninstall.st
 ```
 
 
@@ -130,7 +133,7 @@ You can find a lot more examples in the examples directory. Here we show you a b
 #### Writing a program that interacts with stdin and stdout:
 
 ```smalltalk
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
 
@@ -144,7 +147,7 @@ got := system stdin upTo: Character lf.
 #### Writing a program that calls ls -l
 
 ```smalltalk
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 (system call: 'ls -l') lines do: [ :line |
 	system stdout << line.
@@ -155,7 +158,7 @@ got := system stdin upTo: Character lf.
 #### Or doing the same directly in Pharo :D
 
 ```smalltalk
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 system pwd entries do: [ :entry |
 	system stdout << entry asString.
@@ -167,7 +170,7 @@ system pwd entries do: [ :entry |
 #### Asking for an asynchrouns call! 
 
 ```smalltalk
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 | futurels |
  futurels := system callAsync: 'sleep 2 && ls -l'.
@@ -181,7 +184,7 @@ system pwd entries do: [ :entry |
 #### Downloading new images, and using options :) 
 
 ```smalltalk
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 | version  |
 	
