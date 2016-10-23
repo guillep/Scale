@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"interpreter" : "SantiagoBragagnolo 6/20/2016 14:03" },
+		"appliesTo:" : "SantiagoBragagnolo 10/23/2016 19:38",
+		"interpreter" : "SantiagoBragagnolo 10/23/2016 19:35",
+		"interpreterAndAliases" : "SantiagoBragagnolo 10/23/2016 19:38" },
 	"instance" : {
 		"content" : "SantiagoBragagnolo 6/20/2016 14:03",
 		"runnerClass" : "SantiagoBragagnolo 6/20/2016 13:57",

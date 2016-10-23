@@ -1,3 +1,3 @@
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 system stdout << 'hello'

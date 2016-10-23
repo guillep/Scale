@@ -1,3 +1,3 @@
 as yet unclassified
 interpreter
-	^ '#!/usr/bin/scale'
+	^ '#!/usr/local/bin/scale'

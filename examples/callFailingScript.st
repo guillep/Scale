@@ -1,4 +1,4 @@
-#!/usr/bin/scale
+#!/usr/local/bin/scale
 
 system stdout << 'Doing a wrong call'.
 system stdout cr.
