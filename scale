@@ -1,3 +1,3 @@
 #!/bin/bash
 
-${HOME}/.config/pharo/pharo ${HOME}/.config/scale/Pharo.image scale "$@"
+${HOME}/.scale/pharo/pharo ${HOME}/.scale/scale/Pharo.image scale "$@"

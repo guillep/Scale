@@ -6,8 +6,8 @@
 
 system stdout << 'Deploying scale command...'; cr.
 
-scaleParentDirectory := (system home / '.config' / 'scale') asFileReference.
-pharoParentDirectory := (system home / '.config' / 'pharo') asFileReference.
+scaleParentDirectory := (system home / '.scale' / 'scale') asFileReference.
+pharoParentDirectory := (system home / '.scale' / 'pharo') asFileReference.
 
 scaleParentDirectory exists 
 ifTrue: [ 

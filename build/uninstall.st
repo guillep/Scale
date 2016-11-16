@@ -1,6 +1,6 @@
 #!/usr/local/bin/scale
 
-| scapeParentDirectory pharoParentDirectory scaleX scaleuiX |
+| scapeParentDirectory scaleX scaleuiX |
 
 system stdout << 'Uninstalling scale' << String cr.
 
@@ -15,14 +15,9 @@ scaleuiX:='/usr/local/bin/scale-ui' asFileReference.
 scaleuiX exists ifTrue: [ system call: ' rm  ', scaleuiX fullName  ].
 system stdout << 'Uninstalling executable scale-ui' << String cr ; flush.
 
-scapeParentDirectory := '/usr/local/scale' asFileReference.
-pharoParentDirectory := '/usr/local/pharo' asFileReference.
+scapeParentDirectory := (system home / '.scale') asFileReference.
 
 scapeParentDirectory exists ifTrue: [ system call: ' rm -rf ', scapeParentDirectory fullName  ].
 system stdout << 'Removing scale folder' << String cr ; flush.
-
-pharoParentDirectory exists ifTrue: [  system call: ' rm -rf ', pharoParentDirectory fullName ].
-system stdout << 'Removing pharo folder' << String cr ; flush.
-
 
 system stdout << 'Done!' << String cr.
