@@ -1,12 +1,10 @@
-
 [![Build Status](https://travis-ci.org/guillep/Scale.svg?branch=master)](https://travis-ci.org/guillep/Scale)
 
 
 Scale
 =====
 
-Scale aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use it's power, and have a better syntax instead of the ugly bash one :).
-
+Scale aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use its power, and have a better syntax instead of the ugly bash one :).
 
 DISCLAIMER: Scale is tested only in Linux. 
 
@@ -25,14 +23,15 @@ For installing Scale you have to be SUDOER and to have internet connection.
   If you just want to use it, ZeroConf is your deal. 
   
 
-##ZeroConf 
- Because nobody likes to do it in more than one line. 
-```bash
-   wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
- ```
-  The 
-##Classic 
+## ZeroConf
 
+Because nobody likes to do it in more than one line:
+```bash
+wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
+ ```
+
+
+## Classic installation
 
 ```bash
 git clone https://github.com/guillep/Scale
@@ -76,7 +75,7 @@ scale-ui [ script-path  [ script-options]  | folder ]
 
 ## Installation folders
 
-Scale installs it self in /usr/local/bin folder, adding the following files and directories: 
+Scale installs itself in `/usr/local/bin` folder, adding the following files and directories:
 
 ```bash
 /usr/local
@@ -113,7 +112,7 @@ Scale installs it self in /usr/local/bin folder, adding the following files and 
 
 ```
 
-Since the installation process is supposed to address /usr/local/bin as installation folder, there is no need for adding any information to the PATH variable.
+Since the installation process is supposed to address `/usr/local/bin` as installation folder, there is no need for adding any information to the `PATH` variable.
 
 
 ## Uninstall Scale 
@@ -127,7 +126,7 @@ sudo /usr/local/scale/uninstall.st
 Examples
 -------
 
-You can find a lot more examples in the examples directory. Here we show you a bunch of them
+You can find a lot more examples in the examples directory.
 
 
 #### Writing a program that interacts with stdin and stdout:
