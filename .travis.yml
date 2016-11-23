@@ -18,8 +18,8 @@ script:
  - ./examples/ls.st
  - ./examples/fact.st
  - ./examples/download.st -v 60
- - ./examples/paralell-call.st
- - ./examples/paralell-call2.st
+ - ./examples/parallel-call.st
+ - ./examples/parallel-call2.st
  - ./examples/stdout.st
 
 
