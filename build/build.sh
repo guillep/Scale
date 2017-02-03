@@ -3,7 +3,7 @@ set -e
 
 #Load image for this project
 
-rm cache -r
+rm -fr cache
 mkdir -p cache
 cd cache
 wget -O - get.pharo.org/50+vm | bash

@@ -1,9 +1,8 @@
-
 [![Build Status](https://travis-ci.org/guillep/Scale.svg?branch=master)](https://travis-ci.org/guillep/Scale)
 
 # Scale
 
-Scale aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use it's power, and have a better syntax instead of the ugly bash one :).
+Scale aims to take Pharo into the shell. That is, to write shell scripts in Pharo, use its power, and have a better syntax instead of the ugly bash one :).
 
 DISCLAIMER: Scale is tested only in Linux.
 
@@ -19,12 +18,13 @@ If you just want to use it, ZeroConf is your deal.
 
 ## ZeroConf
 
-Because nobody likes to do it in more than one line.
+Because nobody likes to do it in more than one line:
+
 ```bash
 wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
  ```
 
-## The Classic
+## The Classic installation
 
 ```bash
 git clone https://github.com/guillep/Scale
@@ -103,6 +103,8 @@ $HOME/.scale/
     └── uninstall.st
 ```
 
+Since the installation process is supposed to address `/usr/local/bin` as installation folder, there is no need for adding any information to the `PATH` variable.
+
 ## Uninstall Scale
 
 ```bash
@@ -111,7 +113,7 @@ $HOME/.scale/scale/uninstall.st
 
 # Examples
 
-You can find a lot more examples in the examples directory. Here we show you a bunch of them
+You can find a lot more examples in the examples directory.
 
 #### Writing a program that interacts with stdin and stdout:
 
