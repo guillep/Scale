@@ -103,7 +103,7 @@ $HOME/.scale/
     └── uninstall.st
 ```
 
-Since the installation process is supposed to address `/usr/local/bin` as installation folder, there is no need for adding any information to the `PATH` variable.
+Since the installation process is supposed to create symlinks in `/usr/local/bin` folder, there is no need for adding any information to the `PATH` variable.
 
 ## Uninstall Scale
 
