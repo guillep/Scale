@@ -1,7 +1,14 @@
 language: c
-os:
-  - linux
-sudo: true
+sudo: required
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+    - os: linux
+      dist: precise
+    - os: osx
+
 addons:
   apt:
     packages:
