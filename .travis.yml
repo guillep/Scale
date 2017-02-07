@@ -16,7 +16,7 @@ matrix:
 
 before_install:
     - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386        ; fi 
-    - if [[ "$DISTRO" == "trusty" ]]; sudo apt-get update ; fi
+    - if [[ "$DISTRO" == "trusty" ]]; then sudo apt-get update ; fi
 
 addons:
   apt:
