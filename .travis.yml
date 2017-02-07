@@ -7,12 +7,12 @@ matrix:
   include:
     - os: linux
       dist: trusty
-      env: DISTRO=trusty
+      env: DISTRO="trusty"
     - os: linux
       dist: precise
-      env: DISTRO=precise
+      env: DISTRO="precise"
     - os: osx
-      env: DISTRO=osx
+      env: DISTRO="osx"
 
 before_install:
     - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386        ; fi 
