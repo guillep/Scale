@@ -7,13 +7,14 @@ matrix:
   include:
     - os: linux
       dist: trusty
+      before_install:
+ 	 - sudo dpkg --add-architecture i386
+ 	 - sudo apt-get update
     - os: linux
       dist: precise
     - os: osx
 
-before_install:
-  - sudo dpkg --add-architecture i386
-  - sudo apt-get update
+
 addons:
   apt:
     packages:
