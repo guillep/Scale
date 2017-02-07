@@ -14,7 +14,7 @@ before_install:
     - echo "BEFORE INSTALL" 
     - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386        ; fi 
     - if [[ "$DISTRO" == "trusty" ]]; then sudo apt-get update ; fi
-    - sudo apt-get install libssl1.0.0:i386 libfreetype6:i386 lib32asound2 lib32z1 lib32bz2-1.0
+    - sudo apt-get install libssl1.0.0:i386 libfreetype6:i386 libasound2:i386 lib32z1 lib32bz2-1.0
 
 
 install: 
