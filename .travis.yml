@@ -1,6 +1,8 @@
 language: c
 sudo: required
 
+
+
 matrix:
   include:
     - os: linux
@@ -9,6 +11,9 @@ matrix:
       dist: precise
     - os: osx
 
+before_install:
+  - sudo dpkg --add-architecture i386
+  - sudo apt-get update
 addons:
   apt:
     packages:
