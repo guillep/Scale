@@ -1,5 +1,5 @@
 utils - call commands
-nohupCall: aCommand withArguments: argumentCollection
-	^ self nohupCall: (self 
+execAsync: aCommand withArguments: argumentCollection
+	^ self callAsync: (self 
 		concatCommand: aCommand 
 		withArguments: argumentCollection)
