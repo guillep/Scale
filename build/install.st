@@ -37,7 +37,6 @@ ifTrue: [
 	system call: 'chmod +x ', (scaleParentDirectory / 'uninstall.st') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
-	system ln: scaleFile to: '/usr/local/bin/scale' asFileReference.
-	system ln: scaleUIFile to: '/usr/local/bin/scale-ui' asFileReference.
-	system stdout << 'Done!'.
+	system stdout << 'Successfully installed Scale! Now, add the Scale binaries to your $PATH:'; cr.
+        system stdout << ('export PATH="{1}:$PATH"' format: { scaleParentDirectory | fullName }); cr.
 ].

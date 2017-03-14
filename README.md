@@ -21,7 +21,7 @@ If you just want to use it, ZeroConf is your deal.
 Because nobody likes to do it in more than one line:
 
 ```bash
-wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | sudo bash
+wget -O- https://raw.githubusercontent.com/guillep/Scale/master/setupScale.sh | bash
  ```
 
 ## The Classic installation
@@ -65,13 +65,9 @@ scale-ui [ script-path  [ script-options]  | folder ]
 
 ## Installation folders
 
-Scale installs itself in $HOME/.scale/ and /usr/local/bin/ folders, adding the following files and directories:
+Scale installs itself in $HOME/.scale/ folder, adding the following files and directories:
 
 ```bash
-/usr/local
-├── bin
-│   └── scale     ->  $HOME/.scale/scale/scale
-│   └── scale-ui  ->  $HOME/.scale/scale/scale-ui
 $HOME/.scale/
 ├── pharo
 ├── pharo-ui
@@ -102,8 +98,6 @@ $HOME/.scale/
     ├── Pharo.changes
     └── uninstall.st
 ```
-
-Since the installation process is supposed to create symlinks in `/usr/local/bin` folder, there is no need for adding any information to the `PATH` variable.
 
 ## Uninstall Scale
 

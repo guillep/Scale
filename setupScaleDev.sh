@@ -1,11 +1,5 @@
 #!/bin/sh
 
-
-if [ "$(id -u)" != "0" ]; then
-  echo "Sudo privs needed for the tool installation " 
-	exit 1
-fi
-
 echo "*********************************************"
 echo "* cloning repository " 
 echo "*********************************************"
@@ -27,5 +21,3 @@ echo "*********************************************"
 echo "* Cleaning the mess :)   " 
 echo "*********************************************"
 rm /tmp/scale -rf
-
-
