@@ -1,3 +1,3 @@
 utils - arguments
 argumentAt: index
-	^ arguments argumentAt: index
+	^ self arguments at: index
