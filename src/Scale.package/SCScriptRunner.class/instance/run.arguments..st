@@ -7,7 +7,7 @@ run: aScript arguments: anArgObject
 		during: [ 
 			system arguments: anArgObject.
 			ScaleStore useDuring: [
-				result := self class compiler 
+				result := Smalltalk compiler 
 					evaluate: aScript 
 					for: self 
 					logged: false.
