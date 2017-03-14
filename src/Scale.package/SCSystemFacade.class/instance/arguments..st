@@ -1,3 +1,3 @@
-utils - arguments
+private
 arguments: anArgObect
 	arguments := anArgObect
