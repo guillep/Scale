@@ -1,7 +1,6 @@
 utils - call commands
 callAsync: aCommand
-
-"
+	"
 		- This call executes a given string as a default-interpreter (bash) line
 		- The call is managed like an asynchronous call 
 		- This call will return a future. This future can be configured with callbacks or joined. 
@@ -12,6 +11,6 @@ callAsync: aCommand
 						the callback will receive an exception as parameter
 		- Forcely this call is only valid for unix based environments. 
 	"
-
-
-	^ self callAsync: aCommand withInterpreter: 'bash'
+	^ (self prepareCall: aCommand) 
+		async;
+		call

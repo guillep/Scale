@@ -1,0 +1,3 @@
+testing
+isAsync 
+	^ async

@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Scale",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"verbose",
+		"interpreter",
+		"command",
+		"async",
+		"arguments",
+		"background",
+		"nohup"
+	],
+	"name" : "SCSystemCall",
+	"type" : "normal"
+}

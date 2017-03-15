@@ -1,6 +1,6 @@
 running
 run: aSCScript
-	^ ScaleStore useDuring: [ 
+	^ SCUnixStore useDuring: [ 
 		Smalltalk compiler 
 			evaluate: aSCScript content 
 			for: self runnerInstance 

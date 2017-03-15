@@ -6,7 +6,7 @@ run: aScript arguments: anArgObject
 		useAuthor: 'ScaleUser-' , self resolveOperativeSystemUserName
 		during: [ 
 			system arguments: anArgObject.
-			ScaleStore useDuring: [
+			SCUnixStore useDuring: [
 				result := Smalltalk compiler 
 					evaluate: aScript 
 					for: self 

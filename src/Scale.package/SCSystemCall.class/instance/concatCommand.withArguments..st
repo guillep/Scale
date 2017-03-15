@@ -1,4 +1,4 @@
-private
+private accessing
 concatCommand: aCommand withArguments: argumentCollection
 	^ String
 		streamContents: [ :stream | 

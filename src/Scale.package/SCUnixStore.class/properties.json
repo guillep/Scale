@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ScaleStore",
+	"name" : "SCUnixStore",
 	"type" : "normal"
 }
