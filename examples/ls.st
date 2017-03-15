@@ -1,4 +1,4 @@
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 (system call: 'ls -l') lines do: [ :line |
 	system stdout << line.
