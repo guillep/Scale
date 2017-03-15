@@ -1,4 +1,4 @@
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 
 | futurels |

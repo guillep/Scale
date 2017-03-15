@@ -1,15 +1,15 @@
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
-| scapeParentDirectory scaleX scaleuiX |
+| scaleParentDirectory |
 
 system stdout << 'Uninstalling scale' << String cr.
 
 system saveImageAs: #/ asFileReference / #tmp / #'uninstall.image'.
 " The image must be stored elsewhere for deleting all the files "
 
-scapeParentDirectory := (system home / '.scale') asFileReference.
+scaleParentDirectory := (system home / '.scale') asFileReference.
 
-scapeParentDirectory exists ifTrue: [ system call: ' rm -rf ', scapeParentDirectory fullName  ].
-system stdout << 'Removing scale folder' << String cr ; flush.
+system stdout << 'Removing scale folder...' << String cr ; flush.
+scaleParentDirectory exists ifTrue: [ system call: ' rm -rf ', scaleParentDirectory fullName ].
 
 system stdout << 'Done!' << String cr.

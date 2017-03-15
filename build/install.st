@@ -1,4 +1,4 @@
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 | scaleParentDirectory pharoParentDirectory scaleFile scaleUIFile |
 
@@ -38,5 +38,5 @@ ifTrue: [
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
 	system stdout << 'Successfully installed Scale! Now, add the Scale binaries to your $PATH:'; cr.
-        system stdout << ('export PATH="{1}:$PATH"' format: { scaleParentDirectory | fullName }); cr.
+	system stdout << ('export PATH="{1}:$PATH"' format: { ('$HOME/', '.scale/', 'scale') }); cr.
 ].

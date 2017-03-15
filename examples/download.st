@@ -1,4 +1,4 @@
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 	| version  |
 	
 	version := (system arguments optionAt: #v ifAbsent: [ 50 ]) asInteger.

@@ -33,6 +33,12 @@ cd Scale
 ./build/scale-bootstrap ./build/install.st
 ```
 
+Then please add the Scale binaries to your `$PATH`:
+
+```
+export PATH="$HOME/.scale/scale:$PATH"
+```
+
 ## Checking the installation
 
 ```bash
@@ -69,28 +75,28 @@ Scale installs itself in $HOME/.scale/ folder, adding the following files and di
 
 ```bash
 $HOME/.scale/
-├── pharo
-├── pharo-ui
-├── pharo-vm
-│   ├── libB3DAcceleratorPlugin.so
-│   ├── libFT2Plugin.so
-│   ├── libgit2.so.0
-│   ├── libInternetConfigPlugin.so
-│   ├── libJPEGReaderPlugin.so
-│   ├── libJPEGReadWriter2Plugin.so
-│   ├── libRePlugin.so
-│   ├── libSDL2-2.0.so.0
-│   ├── libSDL2-2.0.so.0.2.1
-│   ├── libSDL2DisplayPlugin.so
-│   ├── libSqueakSSL.so
-│   ├── libssh2.so.1
-│   ├── libSurfacePlugin.so
-│   ├── pharo
-│   ├── PharoV50.sources
-│   ├── vm-display-null
-│   ├── vm-display-X11
-│   ├── vm-sound-ALSA
-│   └── vm-sound-null
+├─── pharo
+│    ├──pharo-ui
+│    └─ pharo-vm
+│       ├── libB3DAcceleratorPlugin.so
+│       ├── libFT2Plugin.so
+│       ├── libgit2.so.0
+│       ├── libInternetConfigPlugin.so
+│       ├── libJPEGReaderPlugin.so
+│       ├── libJPEGReadWriter2Plugin.so
+│       ├── libRePlugin.so
+│       ├── libSDL2-2.0.so.0
+│       ├── libSDL2-2.0.so.0.2.1
+│       ├── libSDL2DisplayPlugin.so
+│       ├── libSqueakSSL.so
+│       ├── libssh2.so.1
+│       ├── libSurfacePlugin.so
+│       ├── pharo
+│       ├── PharoV50.sources
+│       ├── vm-display-null
+│       ├── vm-display-X11
+│       ├── vm-sound-ALSA
+│       └── vm-sound-null
 └── scale
     ├── scale
     ├── scale-ui
@@ -112,7 +118,7 @@ You can find a lot more examples in the examples directory.
 #### Writing a program that interacts with stdin and stdout:
 
 ```smalltalk
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 system stdout << 'I will echo everything you type. Type exit to exit';cr;cr.
 
@@ -126,7 +132,7 @@ got := system stdin upTo: Character lf.
 #### Writing a program that calls ls -l
 
 ```smalltalk
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 (system call: 'ls -l') lines do: [ :line |
 	system stdout << line.
@@ -137,7 +143,7 @@ got := system stdin upTo: Character lf.
 #### Or doing the same directly in Pharo :D
 
 ```smalltalk
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 system pwd entries do: [ :entry |
 	system stdout << entry asString.
@@ -148,7 +154,7 @@ system pwd entries do: [ :entry |
 #### Asking for an asynchrouns call! 
 
 ```smalltalk
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 | futurels |
  futurels := system callAsync: 'sleep 2 && ls -l'.
@@ -159,7 +165,7 @@ system pwd entries do: [ :entry |
 #### Downloading new images, and using options :)
 
 ```smalltalk
-#!/usr/local/bin/scale
+#!/usr/bin/env scale
 
 | version  |
 	
