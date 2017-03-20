@@ -6,5 +6,5 @@ baseline: spec
 		do: [ spec blessing: #baseline.
 			spec
 				baseline: 'TaskItShell'
-				with: [ spec repository: 'github://sbragagnolo/taskit:pre-release-3-scale' ].
+				with: [ spec repository: 'github://sbragagnolo/taskit:v-0.2.1' ].
 			spec package: #Scale ]
