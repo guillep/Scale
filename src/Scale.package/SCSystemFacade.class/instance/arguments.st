@@ -1,3 +1,4 @@
 utils - arguments
-arguments
-	^ arguments.
+arguments 
+	^ self commandLineArguments allButFirst
+		

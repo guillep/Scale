@@ -1,14 +1,13 @@
 {
-	"category" : "Scale",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "Santiag 10/21/2016 16:05",
-	"instvars" : [
-		"runner" ],
-	"name" : "SCCommandLineHandler",
-	"pools" : [
-		 ],
 	"super" : "STCommandLineHandler",
-	"type" : "normal" }
+	"category" : "Scale",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"runner"
+	],
+	"name" : "SCCommandLineHandler",
+	"type" : "normal"
+}

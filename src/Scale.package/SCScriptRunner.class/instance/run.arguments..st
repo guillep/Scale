@@ -1,8 +1,16 @@
 running
 run: aScript arguments: anArgObject
 	| result |
-	Author fullName: 'ScaleUser-' , self resolveOperativeSystemUserName.
-	system arguments: anArgObject.
-	result := Compiler evaluate: aScript for: self logged: false.
-	system joinAllCalls.
-	^ result
+	
+	Author 
+		useAuthor: 'ScaleUser-' , self resolveOperativeSystemUserName
+		during: [ 
+			system arguments: anArgObject.
+			SCUnixStore useDuring: [
+				result := Smalltalk compiler 
+					evaluate: aScript 
+					for: self 
+					logged: false.
+				system joinAllCalls.
+				^ result ] ].
+	

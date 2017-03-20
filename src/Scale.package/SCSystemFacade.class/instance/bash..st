@@ -8,5 +8,6 @@ bash: aScript
 				content of the stander error stream.
 		- Forcely this call is only valid for unix based environments. 
 	"
-
-	^ self call: aScript withInterpreter: 'bash'
+	^ (self prepareCall: aScript)
+		interpreter: 'bash';
+		call

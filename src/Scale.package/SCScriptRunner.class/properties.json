@@ -1,14 +1,13 @@
 {
-	"category" : "Scale",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:21",
-	"instvars" : [
-		"system" ],
-	"name" : "SCScriptRunner",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Scale",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"system"
+	],
+	"name" : "SCScriptRunner",
+	"type" : "normal"
+}

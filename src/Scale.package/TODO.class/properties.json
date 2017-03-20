@@ -1,14 +1,11 @@
 {
-	"category" : "Scale",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "SantiagoBragagnolo 10/18/2016 15:46",
-	"instvars" : [
-		 ],
-	"name" : "TODO",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Scale",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TODO",
+	"type" : "normal"
+}
