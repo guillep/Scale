@@ -33,7 +33,7 @@ install:
 
   
 script:
- - if [[ "$TEST" == "UNINSTALL" ]]; then sudo scale build/uninstall.st ; fi
+ - if [[ "$TEST" == "UNINSTALL" ]]; then sudo $HOME/.scale/scale/uninstall.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
