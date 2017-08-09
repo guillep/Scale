@@ -8,32 +8,32 @@ matrix:
       env: DISTRO="trusty" TEST="BASIC"
     - os: linux
       dist: trusty
-      env: DISTRO="trusty" TEST="INSTALLATION"
+      env: DISTRO="trusty" TEST="UNINSTALL"
     - os: linux
       dist: precise
       env: DISTRO="precise" TEST="BASIC"
     - os: linux
       dist: precise
-      env: DISTRO="precise" TEST="INSTALLATION"
+      env: DISTRO="precise" TEST="UNINSTALL"
     - os: osx
       env: TEST="BASIC"
     - os: osx
-      env: TEST="INSTALLATION"
+      env: TEST="UNINSTALL"
 
 before_install:
-    - echo "BEFORE INSTALL" 
     - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386 ; fi
     - if [[ "$DISTRO" == "trusty" ]]; then sudo apt-get update ; fi
     - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then sudo apt-get install libssl1.0.0:i386 libfreetype6:i386 libasound2:i386 lib32z1 lib32bz2-1.0 ;fi
 
 
 install: 
-  - if [[ "$TEST" == "BASIC" ]]; then sudo ./setupScaleDev.sh ; fi 
+ - ./build/build.sh
+ - sudo ./build/scale-bootstrap build/install.st
+ - export PATH=$PATH:~/.scale/scale"
+
+  
 script:
- - if [[ "$TEST" == "INSTALLATION" ]]; then ./build/build.sh ; fi
- - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./build/scale-bootstrap build/install.st ; fi
- - "export PATH=$PATH:~/.scale/scale"
- - if [[ "$TEST" == "INSTALLATION" ]]; then sudo scale build/uninstall.st ; fi
+ - if [[ "$TEST" == "UNINSTALL" ]]; then sudo scale build/uninstall.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
