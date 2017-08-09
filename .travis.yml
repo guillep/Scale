@@ -29,7 +29,7 @@ before_install:
 install: 
  - ./build/build.sh
  - sudo ./build/scale-bootstrap build/install.st
- - export PATH=$PATH:~/.scale/scale"
+ - export PATH=$PATH:~/.scale/scale
 
   
 script:
