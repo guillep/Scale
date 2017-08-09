@@ -31,9 +31,8 @@ install:
  - sudo ./build/scale-bootstrap build/install.st
  - export PATH=$PATH:~/.scale/scale
 
-  
 script:
- - if [[ "$TEST" == "UNINSTALL" ]]; then sudo $HOME/.scale/scale/uninstall.st ; fi
+ - if [[ "$TEST" == "UNINSTALL" ]]; then sudo PATH=$PATH:~/.scale/scale $HOME/.scale/scale/uninstall.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
