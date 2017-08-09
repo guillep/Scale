@@ -5,32 +5,20 @@ matrix:
   include:
     - os: linux
       dist: trusty
-      env:
-	   - DISTRO="trusty"
-	   - TEST=BASIC
+      env: DISTRO="trusty" TEST="BASIC"
     - os: linux
       dist: trusty
-      env:
-	   - DISTRO="trusty"
-	   - TEST=INSTALLATION
+      env: DISTRO="trusty" TEST="INSTALLATION"
     - os: linux
       dist: precise
-      env:
-	   - DISTRO="precise"
-	   - TEST=BASIC
+      env: DISTRO="precise" TEST="BASIC"
     - os: linux
       dist: precise
-      env:
- 	   - DISTRO="precise"
- 	   - TEST=INSTALLATION
+      env: DISTRO="precise" TEST="INSTALLATION"
     - os: osx
-      env:
- 	   - DISTRO="precise"
- 	   - TEST=BASIC
+      env: TEST="BASIC"
     - os: osx
-      env:
- 	   - DISTRO="precise"
- 	   - TEST=INSTALLATION
+      env: TEST="INSTALLATION"
 
 before_install:
     - echo "BEFORE INSTALL" 
@@ -52,32 +40,3 @@ script:
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call2.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/stdout.st ; fi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
