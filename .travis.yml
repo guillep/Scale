@@ -5,54 +5,38 @@ matrix:
   include:
     - os: linux
       dist: trusty
-      env: DISTRO="trusty"
+      env: DISTRO="trusty" TEST="BASIC"
+    - os: linux
+      dist: trusty
+      env: DISTRO="trusty" TEST="UNINSTALL"
     - os: linux
       dist: precise
-      env: DISTRO="precise"
+      env: DISTRO="precise" TEST="BASIC"
+    - os: linux
+      dist: precise
+      env: DISTRO="precise" TEST="UNINSTALL"
+    - os: osx
+      env: TEST="BASIC"
+    - os: osx
+      env: TEST="UNINSTALL"
 
 before_install:
-    - echo "BEFORE INSTALL" 
-    - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386        ; fi 
+    - if [[ "$DISTRO" == "trusty" ]]; then sudo dpkg --add-architecture i386 ; fi
     - if [[ "$DISTRO" == "trusty" ]]; then sudo apt-get update ; fi
-    - sudo apt-get install libssl1.0.0:i386 libfreetype6:i386 libasound2:i386 lib32z1 lib32bz2-1.0
+    - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then sudo apt-get install libssl1.0.0:i386 libfreetype6:i386 libasound2:i386 lib32z1 lib32bz2-1.0 ;fi
 
 
 install: 
-  - sudo ./setupScaleDev.sh
+ - ./build/build.sh
+ - sudo ./build/scale-bootstrap build/install.st
+ - export PATH=$PATH:~/.scale/scale
+
 script:
- - ./examples/lsst.st
- - ./examples/ls.st
- - ./examples/fact.st
- - ./examples/download.st -v 60
- - ./examples/parallel-call.st
- - ./examples/parallel-call2.st
- - ./examples/stdout.st
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+ - if [[ "$TEST" == "UNINSTALL" ]]; then sudo PATH=$PATH:~/.scale/scale $HOME/.scale/scale/uninstall.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/download.st -v 60 ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call2.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/stdout.st ; fi
