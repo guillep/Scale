@@ -1,3 +1,9 @@
 cache/
 *~
 /cache/*
+
+#Pharo related files
+PharoDebug.log
+*.image
+*.sources
+*.changes
