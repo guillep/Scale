@@ -5,10 +5,32 @@ matrix:
   include:
     - os: linux
       dist: trusty
-      env: DISTRO="trusty"
+      env:
+	   - DISTRO="trusty"
+	   - TEST=BASIC
+    - os: linux
+      dist: trusty
+      env:
+	   - DISTRO="trusty"
+	   - TEST=INSTALLATION
     - os: linux
       dist: precise
-      env: DISTRO="precise"
+      env:
+	   - DISTRO="precise"
+	   - TEST=BASIC
+    - os: linux
+      dist: precise
+      env:
+ 	   - DISTRO="precise"
+ 	   - TEST=INSTALLATION
+    - os: osx
+      env:
+ 	   - DISTRO="precise"
+ 	   - TEST=BASIC
+    - os: osx
+      env:
+ 	   - DISTRO="precise"
+ 	   - TEST=INSTALLATION
 
 before_install:
     - echo "BEFORE INSTALL" 
@@ -18,15 +40,18 @@ before_install:
 
 
 install: 
-  - sudo ./setupScaleDev.sh
+  - if [[ "$TEST" == "BASIC" ]]; then sudo ./setupScaleDev.sh ; fi 
 script:
- - ./examples/lsst.st
- - ./examples/ls.st
- - ./examples/fact.st
- - ./examples/download.st -v 60
- - ./examples/parallel-call.st
- - ./examples/parallel-call2.st
- - ./examples/stdout.st
+ - if [[ "$TEST" == "INSTALLATION" ]]; then ./build/build.sh ; fi
+ - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./build/scale-bootstrap build/install.st ; fi
+ - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./build/scale-bootstrap build/uninstall.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/download.st -v 60 ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/parallel-call2.st ; fi
+ - if [[ "$TEST" == "BASIC" ]]; then ./examples/stdout.st ; fi
 
 
 
