@@ -32,7 +32,8 @@ install:
 script:
  - if [[ "$TEST" == "INSTALLATION" ]]; then ./build/build.sh ; fi
  - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./build/scale-bootstrap build/install.st ; fi
- - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./build/scale-bootstrap build/uninstall.st ; fi
+ - "export PATH=$PATH:~/.scale/scale"
+ - if [[ "$TEST" == "INSTALLATION" ]]; then sudo ./scale build/uninstall.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/lsst.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/ls.st ; fi
  - if [[ "$TEST" == "BASIC" ]]; then ./examples/fact.st ; fi
