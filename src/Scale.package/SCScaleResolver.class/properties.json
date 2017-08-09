@@ -1,16 +1,15 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 10/5/2016 10:39",
-	"super" : "FileSystemResolver",
 	"category" : "Scale-FileResolver",
 	"classinstvars" : [
-		"default"
-	],
-	"pools" : [ ],
-	"classvars" : [ ],
+		"default" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 10/5/2016 10:39",
 	"instvars" : [
 		"changes",
-		"isGenerated"
-	],
+		"isGenerated" ],
 	"name" : "SCScaleResolver",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FileSystemResolver",
+	"type" : "normal" }

@@ -1,8 +1,13 @@
 activation
 loadSourceFiles: anArray
-	| sourceRelativeToPWD sourceReference |
-	sourceRelativeToPWD := SCUnixStore useDuring: [ anArray first asFileReference fullName ].
-	sourceReference := sourceRelativeToPWD asFileReference.
-	sourceReference exists ifFalse: [ 
-		self error: 'File ', sourceReference fullName, ' does not exist.' ].
-	sourceFiles := { sourceReference }
+
+	sourceFiles := anArray collect: [ :each | | path ref |
+		path := each asFileReference path.
+		path isAbsolute ifFalse: [ 
+			path := self toAbsolutePathInPWD: path ].
+		ref := path asFileReference.
+		
+		ref exists ifFalse: [ 
+			self error: 'File ', path fullName, ' does not exist.' ].
+		ref
+	]

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
-	"super" : "SCAbstractCodeManager",
 	"category" : "Scale-UI",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
+	"instvars" : [
+		 ],
 	"name" : "SCScaleCodeManager",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SCAbstractCodeManager",
+	"type" : "normal" }

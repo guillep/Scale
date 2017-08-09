@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "Santiag 10/21/2016 16:05",
-	"super" : "STCommandLineHandler",
 	"category" : "Scale",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "Santiag 10/21/2016 16:05",
 	"instvars" : [
-		"runner"
-	],
+		"runner" ],
 	"name" : "SCCommandLineHandler",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "STCommandLineHandler",
+	"type" : "normal" }

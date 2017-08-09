@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "UnixStore",
 	"category" : "Scale",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
 	"name" : "SCUnixStore",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "UnixStore",
+	"type" : "normal" }

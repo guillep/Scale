@@ -16,24 +16,32 @@ ifTrue: [
 	scaleParentDirectory ensureCreateDirectory.
 	scaleFile := scaleParentDirectory  / 'scale'.
 	scaleUIFile := scaleParentDirectory / 'scale-ui'.
-	system workingDirectory / '..' / 'scale' copyTo: scaleFile.
-	system workingDirectory / '..' / 'scale-ui' copyTo: scaleUIFile.
-	system workingDirectory / '..' / #build / 'uninstall.st' copyTo: scaleParentDirectory / 'uninstall.st'.
+	system workingDirectory / 'scale' copyTo: scaleFile.
+	system workingDirectory / 'scale-ui' copyTo: scaleUIFile.
+	system workingDirectory / 'build' / 'uninstall.st' copyTo: scaleParentDirectory / 'uninstall.st'.
 
 	system stdout << 'Deploying Pharo...'; cr.
 
 	pharoParentDirectory ensureCreateDirectory.
 	#( 'pharo' 'pharo-vm' 'pharo-ui' )
-		do: [ :file | system workingDirectory / file  copyAllTo: pharoParentDirectory / file ].
+		do: [ :file | system workingDirectory / 'cache' / file  copyAllTo: pharoParentDirectory / file ].
 
 	#( 'Pharo.image' 'Pharo.changes' )
-		do: [ :file | system workingDirectory / file  copyAllTo: scaleParentDirectory / file ].
+		do: [ :file | system workingDirectory / 'cache' / file  copyAllTo: scaleParentDirectory / file ].
 
 	system stdout << 'Giving execute permissions...'; cr.
 
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo') fullName.
 	system call: 'chmod +x ', (pharoParentDirectory / 'pharo-ui') fullName.
-	system call: 'chmod +x ', (pharoParentDirectory / 'pharo-vm/pharo') fullName.
+	
+	OSPlatform current isUnix ifTrue: [
+		system call: 'chmod +x ', (pharoParentDirectory / 'pharo-vm/pharo') fullName.
+	].
+	
+	OSPlatform current isMacOSX ifTrue: [
+		system call: 'chmod +x ', (pharoParentDirectory / 'pharo-vm/Pharo.app/Contents/MacOS/pharo') fullName.
+	].
+	
 	system call: 'chmod +x ', (scaleParentDirectory / 'uninstall.st') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.

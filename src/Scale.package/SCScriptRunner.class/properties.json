@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:21",
-	"super" : "Object",
 	"category" : "Scale",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/2/2016 15:21",
 	"instvars" : [
-		"system"
-	],
+		"system" ],
 	"name" : "SCScriptRunner",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

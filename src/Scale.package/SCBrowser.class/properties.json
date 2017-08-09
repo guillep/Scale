@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
-	"super" : "GLMCompositePresentation",
 	"category" : "Scale-UI",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/20/2016 15:11",
+	"instvars" : [
+		 ],
 	"name" : "SCBrowser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 6/22/2016 14:59",
-	"super" : "Object",
 	"category" : "Scale-UI",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/22/2016 14:59",
+	"instvars" : [
+		 ],
 	"name" : "SCWorldMenu",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

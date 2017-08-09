@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 6/22/2016 11:22",
-	"super" : "Object",
 	"category" : "Scale-UI",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SantiagoBragagnolo 6/22/2016 11:22",
 	"instvars" : [
 		"file",
 		"content",
 		"manager",
 		"interpreter",
 		"rawcontent",
-		"newLine"
-	],
+		"newLine" ],
 	"name" : "SCScript",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
