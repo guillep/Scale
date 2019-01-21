@@ -1,10 +1,10 @@
 {
-	"category" : "Scale",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Scale",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"verbose",
 		"interpreter",
@@ -12,9 +12,8 @@
 		"async",
 		"arguments",
 		"background",
-		"nohup" ],
+		"nohup"
+	],
 	"name" : "SCSystemCall",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

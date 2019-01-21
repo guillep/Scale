@@ -1,5 +1,7 @@
 accessing
 defaultWorkingDirectory
 	| pathString |
-	pathString := OSEnvironment current getEnv: 'PWD'.
+	pathString := OSEnvironment current
+		at: 'PWD'
+		ifAbsent: [ self error: 'Imposible to resolve PWD' ].
 	^ self pathFromString: pathString
