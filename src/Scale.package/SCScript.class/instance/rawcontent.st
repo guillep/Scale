@@ -4,6 +4,6 @@ rawcontent
 	^ rawcontent
 		ifNil: [ stream := file readStream.
 			rawcontent := stream contents lines.
-			newLine := stream lineEndConvention.
+			newLine := #crlf.
 			stream close.
 			rawcontent ]
