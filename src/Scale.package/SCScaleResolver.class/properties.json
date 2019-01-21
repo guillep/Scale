@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "SantiagoBragagnolo 10/5/2016 10:39",
+	"commentStamp" : "SantiagoBragagnolo 1/21/2019 21:30",
 	"super" : "FileSystemResolver",
 	"category" : "Scale-FileResolver",
 	"classinstvars" : [
