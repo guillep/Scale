@@ -7,7 +7,7 @@ set -e
 rm -fr cache
 mkdir -p cache
 cd cache
-wget -O - get.pharo.org/50+vm | bash
+wget -O - get.pharo.org/70+vm | bash
 
 echo "Loading Scale and Dependencies..."
 # Load stable version of the monticello configuration, according to
