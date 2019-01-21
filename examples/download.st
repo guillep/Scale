@@ -1,7 +1,7 @@
 #!/usr/bin/env scale
 | version  |
 
-version := (system optionAt: #v ifAbsent: [ 50 ]) asInteger.
+version := (system optionAt: #v ifAbsent: [ 70 ]) asInteger.
 system stdout
 	<< 'Downloading '
 	<< version asString

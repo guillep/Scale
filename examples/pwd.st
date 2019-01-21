@@ -4,7 +4,6 @@
 
 path := (FileLocator home) path.
 
-FileSystem disk changeDirectory: ((OSEnvironment current at: 'PWD') asFileReference).
 
 "system stdout << (OSEnvironment current at: 'PWD'); cr."
 
