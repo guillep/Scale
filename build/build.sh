@@ -10,7 +10,8 @@ cd cache
 
 
 export ARCH=`uname -p`
-if [ "$ARCH" -eq "x86_64" ] then
+if [ "$ARCH" == "x86_64" ] 
+then
  export ARCH="64"
  export VM="vmHeadlessLatest"
 else
@@ -18,7 +19,7 @@ else
  export VM="vm"
 fi
 
-
+echo "Using  get.pharo.org/$ARCH/80+$VM" 
 wget -O - get.pharo.org/$ARCH/80+$VM | bash
 
 echo "Loading Scale and Dependencies..."
