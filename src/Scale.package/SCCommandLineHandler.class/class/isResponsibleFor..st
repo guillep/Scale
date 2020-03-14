@@ -1,4 +1,5 @@
 handler selection
 isResponsibleFor: commandLineArguments
-
-	^ commandLineArguments includesSubCommand: self commandName
+	^ (commandLineArguments arguments reject: [ :a | a beginsWith: '-' ])
+		ifEmpty: [ false ]
+		ifNotEmpty: [ :a | a first = self commandName ]
