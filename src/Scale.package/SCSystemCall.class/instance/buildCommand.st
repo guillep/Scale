@@ -1,6 +1,8 @@
 private building
-buildCommand 
-	| spec |
-	
-	spec := self buildCommandSpec.
-	^ self taskClass buildingCommandWith: spec
+buildCommand
+	^ self interpreter command
+		workingDirectory: self pwdFullName;
+		option: '-c';
+		argument: self commandDecorated;
+		redirectStdoutAsResult;
+		yourself
