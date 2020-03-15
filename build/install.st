@@ -49,6 +49,6 @@ ifTrue: [
 	system call: 'chmod +x ', (scaleParentDirectory / 'uninstall-scale.st') fullName.
 	system call: 'chmod +x ', scaleFile fullName.
 	system call: 'chmod +x ', scaleUIFile fullName.
-	system logCr: 'Successfully installed Scale! Now, add the Scale binaries to your $PATH:'.
+	system logCr: 'Successfully installed Scale. Now, add the Scale binaries to your $PATH:'.
 	system logCr: ('export PATH="{1}:$PATH"' format: { ('$HOME/', '.scale/', 'scale') }).
 ].

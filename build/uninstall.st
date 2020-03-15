@@ -15,4 +15,4 @@ We need thus to patch some of the FFI calls to embed source code and work even i
 	embeddSourceInTrailer.
 scaleParentDirectory exists ifTrue: [ 
 	system call: 'rm -rf ', scaleParentDirectory fullName ].
-system logCr: 'Done!'.
+system logCr: 'Done'.
