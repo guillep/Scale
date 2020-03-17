@@ -1,4 +1,4 @@
 installing
 debug: aDebuggingMessage
 
-	self logCr: 'DEBUG:', aDebuggingMessage 
+	self traceCr: 'DEBUG:', aDebuggingMessage 

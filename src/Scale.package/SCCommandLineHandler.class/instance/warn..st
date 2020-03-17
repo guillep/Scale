@@ -1,3 +1,3 @@
 installing
 warn: aMessage
-	self logCr: 'WARN' , aMessage
+	self traceCr: 'WARN' , aMessage

@@ -1,3 +1,3 @@
 installing
 errorLog: aMessage
-	self logCr: 'ERROR:' , aMessage
+	self traceCr: 'ERROR:' , aMessage
